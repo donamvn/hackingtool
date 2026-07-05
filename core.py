@@ -144,8 +144,7 @@ class HackingTool:
         desc = f"[cyan]{self.DESCRIPTION}[/cyan]"
         if self.PROJECT_URL:
             desc += f"\n[url]🔗 {self.PROJECT_URL}[/url]"
-        if self.ARCHIVED:
-            desc += f"\n[archived]⚠ ARCHIVED: {self.ARCHIVED_REASON}[/archived]"
+        pass  # no archived warning
         console.print(Panel(
             desc,
             title=f"[{THEME_PRIMARY}]{self.TITLE}[/{THEME_PRIMARY}]",
@@ -351,24 +350,14 @@ class HackingToolsCollection:
             console.print(f"[italic cyan]{self.DESCRIPTION}[/italic cyan]\n")
 
     def _active_tools(self) -> list:
-        """Return tools that are not archived and are OS-compatible."""
-        from os_detect import CURRENT_OS
-        return [
-            t for t in self.TOOLS
-            if not getattr(t, "ARCHIVED", False)
-            and CURRENT_OS.system in getattr(t, "SUPPORTED_OS", ["linux", "macos"])
-        ]
+        """Return all tools — no OS or archived filtering."""
+        return list(self.TOOLS)
 
     def _archived_tools(self) -> list:
-        return [t for t in self.TOOLS if getattr(t, "ARCHIVED", False)]
+        return []
 
     def _incompatible_tools(self) -> list:
-        from os_detect import CURRENT_OS
-        return [
-            t for t in self.TOOLS
-            if not getattr(t, "ARCHIVED", False)
-            and CURRENT_OS.system not in getattr(t, "SUPPORTED_OS", ["linux", "macos"])
-        ]
+        return []
 
     def _show_archived_tools(self):
         """Show archived tools sub-menu (option 98)."""

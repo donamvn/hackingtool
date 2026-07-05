@@ -1,14 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
-# ── Python version guard (must be before any other local import) ───────────────
-if sys.version_info < (3, 10):
-    print(
-        f"[ERROR] Python 3.10 or newer is required.\n"
-        f"You are running Python {sys.version_info.major}.{sys.version_info.minor}.\n"
-        f"Upgrade with: sudo apt install python3.10"
-    )
-    sys.exit(1)
+# Python version check removed — run on any Python 3.x
 
 import os
 import platform
@@ -667,14 +660,7 @@ def main():
     try:
         from os_detect import CURRENT_OS
 
-        if CURRENT_OS.system == "windows":
-            console.print(Panel("[bold red]Please run this tool on Linux or macOS.[/bold red]"))
-            if Confirm.ask("Open guidance link in your browser?", default=True):
-                webbrowser.open_new_tab(f"{REPO_WEB_URL}#windows")
-            return
-
-        if CURRENT_OS.system not in ("linux", "macos"):
-            console.print(f"[yellow]Unsupported OS: {CURRENT_OS.system}. Proceeding anyway...[/yellow]")
+        # OS check removed — run on any platform
 
         get_tools_dir()   # ensures ~/.hackingtool/tools/ exists
         interact_menu()
