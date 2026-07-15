@@ -7,6 +7,7 @@ from rich import box
 
 class GoSpider(HackingTool):
     TITLE = "Gospider"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Gospider - Fast web spider written in Go"
     INSTALL_COMMANDS = ["sudo go get -u github.com/jaeles-project/gospider"]
     PROJECT_URL = "https://github.com/jaeles-project/gospider"

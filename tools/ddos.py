@@ -14,7 +14,7 @@ class DDoSTool(HackingTool):
     )
     INSTALL_COMMANDS = [
         "git clone https://github.com/the-deepnet/ddos.git",
-        "cd ddos && sudo pip3 install -r requirements.txt",
+        "cd ddos && pip install --user -r requirements.txt",
     ]
     PROJECT_URL = "https://github.com/the-deepnet/ddos"
 
@@ -41,7 +41,7 @@ class SlowLoris(HackingTool):
         "Slowloris is basically an HTTP Denial of Service attack. "
         "It sends lots of HTTP requests."
     )
-    INSTALL_COMMANDS = ["sudo pip3 install slowloris"]
+    INSTALL_COMMANDS = ["pip install --user slowloris"]
 
     def run(self):
         target_site = Prompt.ask("Enter Target Site")

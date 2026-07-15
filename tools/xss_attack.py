@@ -8,6 +8,7 @@ from core import HackingTool, HackingToolsCollection, console
 
 class Dalfox(HackingTool):
     TITLE = "DalFox (Finder of XSS)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "XSS Scanning and Parameter Analysis tool."
     INSTALL_COMMANDS = [
         "sudo apt-get install -y golang",
@@ -21,10 +22,11 @@ class Dalfox(HackingTool):
 
 class XSSPayloadGenerator(HackingTool):
     TITLE = "XSS Payload Generator"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "XSS PAYLOAD GENERATOR - XSS SCANNER - XSS DORK FINDER"
     INSTALL_COMMANDS = [
         "git clone https://github.com/capture0x/XSS-LOADER.git",
-        "cd XSS-LOADER;sudo pip3 install -r requirements.txt"
+        "cd XSS-LOADER;pip install --user -r requirements.txt"
     ]
     RUN_COMMANDS = ["cd XSS-LOADER;sudo python3 payloader.py"]
     PROJECT_URL = "https://github.com/capture0x/XSS-LOADER.git"
@@ -32,6 +34,7 @@ class XSSPayloadGenerator(HackingTool):
 
 class XSSFinder(HackingTool):
     TITLE = "Extended XSS Searcher and Finder"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Extended XSS Searcher and Finder"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Damian89/extended-xss-search.git"]
@@ -59,6 +62,7 @@ class XSSFinder(HackingTool):
 
 class XSpear(HackingTool):
     TITLE = "XSpear"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = "XSpear is an XSS Scanner built on Ruby Gems."
     INSTALL_COMMANDS = ["gem install XSpear"]
     RUN_COMMANDS = ["XSpear -h"]
@@ -67,6 +71,7 @@ class XSpear(HackingTool):
 
 class XSSStrike(HackingTool):
     TITLE = "Advanced XSS Detection Suite"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "XSStrike is a Python-based tool designed to detect and exploit XSS vulnerabilities."
     INSTALL_COMMANDS = [
         "sudo rm -rf XSStrike",

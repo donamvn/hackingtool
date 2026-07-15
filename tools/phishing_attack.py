@@ -16,6 +16,7 @@ class Autophisher(HackingTool):
 
 class Pyphisher(HackingTool):
     TITLE = "Pyphisher"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Easy to use phishing tool with 77 website templates"
     # Bug 9 fix: pip must reference the full path, not rely on a no-op "cd" call
     INSTALL_COMMANDS = [
@@ -61,7 +62,7 @@ class SocialFish(HackingTool):
     DESCRIPTION = "Automated Phishing Tool & Information Collector NOTE: username is 'root' and password is 'pass'"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/SocialFish.git && sudo apt-get install python3 python3-pip python3-dev -y",
-        "cd SocialFish && sudo python3 -m pip install -r requirements.txt",
+        "cd SocialFish && pip install --user -r requirements.txt",
     ]
     RUN_COMMANDS = ["cd SocialFish && sudo python3 SocialFish.py root pass"]
     PROJECT_URL = "https://github.com/UndeadSec/SocialFish"
@@ -77,7 +78,7 @@ class HiddenEye(HackingTool):
     INSTALL_COMMANDS = [
         # Vuln 2 fix: chmod 777 → chmod 755
         "git clone https://github.com/Morsmalleo/HiddenEye.git && chmod -R 755 HiddenEye",
-        "cd HiddenEye && sudo pip3 install -r requirements.txt && pip3 install pyngrok",
+        "cd HiddenEye && pip install --user -r requirements.txt && pip install --user pyngrok",
     ]
     RUN_COMMANDS = ["cd HiddenEye && sudo python3 HiddenEye.py"]
     PROJECT_URL = "https://github.com/Morsmalleo/HiddenEye"
@@ -174,6 +175,7 @@ class Thanos(HackingTool):
 
 class QRLJacking(HackingTool):
     TITLE = "QRLJacking"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "QRLJacking — session hijacking attack vector targeting QR code based login"
     INSTALL_COMMANDS = [
         "git clone https://github.com/OWASP/QRLJacking.git",
@@ -222,6 +224,7 @@ class Dnstwist(HackingTool):
     # Bug 2 fix: all attributes were wrong case (Title, Install_commands, etc.)
     # They are now the correct uppercase names the base class reads.
     TITLE = "dnstwist"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Domain name permutation engine for detecting typosquatting, phishing and brand impersonation"
     INSTALL_COMMANDS = ["pip3 install --user dnstwist"]
     RUN_COMMANDS = ["dnstwist --help"]

@@ -22,6 +22,7 @@ class TerminalMultiplexer(HackingTool):
 
 class Crivo(HackingTool):
     TITLE = "Crivo"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = (
         "A tool for extracting and filtering URLs, IPs, domains, and subdomains\n"
         "from web pages or text, with built-in web scraping capabilities.\n"

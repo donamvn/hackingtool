@@ -11,6 +11,7 @@ from rich import box
 
 class AppCheck(HackingTool):
     TITLE = "Application Checker"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Tool to check if an app is installed on the target device through a link."
     INSTALL_COMMANDS = [
         "git clone https://github.com/jakuta-tech/underhanded.git",

@@ -10,12 +10,13 @@ from rich import box
 
 class Sherlock(HackingTool):
     TITLE = "Sherlock"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Hunt down social media accounts by username across social networks \n " \
                   "For More Usage \n" \
                   "\t >>python3 sherlock --help"
     INSTALL_COMMANDS = [
         "git clone https://github.com/sherlock-project/sherlock.git",
-        "cd sherlock;sudo python3 -m pip install -r requirements.txt"
+        "cd sherlock;pip install --user -r requirements.txt"
     ]
     PROJECT_URL = "https://github.com/sherlock-project/sherlock"
 
@@ -32,6 +33,7 @@ class Sherlock(HackingTool):
 
 class SocialScan(HackingTool):
     TITLE = "SocialScan | Username or Email"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Check email address and username availability on online " \
                   "platforms with 100% accuracy"
     INSTALL_COMMANDS = ["pip install --user socialscan"]

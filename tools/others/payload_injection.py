@@ -7,6 +7,7 @@ from rich import box
 
 class DebInject(HackingTool):
     TITLE = "Debinject"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Debinject is a tool that inject malicious code into *.debs"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/Debinject.git"]
@@ -16,6 +17,7 @@ class DebInject(HackingTool):
 
 class Pixload(HackingTool):
     TITLE = "Pixload"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Pixload -- Image Payload Creating tools \n " \
                   "Pixload is Set of tools for creating/injecting payload into images."
     INSTALL_COMMANDS = [

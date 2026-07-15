@@ -14,6 +14,7 @@ from rich.prompt import Prompt
 
 class NMAP(HackingTool):
     TITLE = "Network Map (nmap)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Free and open source utility for network discovery and security auditing"
     INSTALL_COMMANDS = [
         "git clone https://github.com/nmap/nmap.git",
@@ -27,6 +28,7 @@ class NMAP(HackingTool):
 
 class Dracnmap(HackingTool):
     TITLE = "Dracnmap"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Dracnmap is an open source program which is using to \n" \
                   "exploit the network and gathering information with nmap help."
     INSTALL_COMMANDS = [
@@ -66,6 +68,7 @@ class Host2IP(HackingTool):
 
 class ReconSpider(HackingTool):
     TITLE = "ReconSpider(For All Scanning)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "ReconSpider is most Advanced Open Source Intelligence (OSINT)" \
                   " Framework for scanning IP Address, Emails, \n" \
                   "Websites, Organizations and find out information from" \
@@ -93,10 +96,11 @@ class IsItDown(HackingTool):
 
 class Striker(HackingTool):
     TITLE = "Striker"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Recon & Vulnerability Scanning Suite"
     INSTALL_COMMANDS = [
         "git clone https://github.com/s0md3v/Striker.git",
-        "cd Striker && pip3 install -r requirements.txt"
+        "cd Striker && pip install --user -r requirements.txt"
     ]
     PROJECT_URL = "https://github.com/s0md3v/Striker"
 
@@ -112,13 +116,14 @@ class Striker(HackingTool):
 
 class SecretFinder(HackingTool):
     TITLE = "SecretFinder (like API & etc)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "SecretFinder - A python script for find sensitive data \n" \
                   "like apikeys, accesstoken, authorizations, jwt,..etc \n " \
                   "and search anything on javascript files.\n\n " \
                   "Usage: python SecretFinder.py -h"
     INSTALL_COMMANDS = [
         "git clone https://github.com/m4ll0k/SecretFinder.git secretfinder",
-        "cd secretfinder; sudo pip3 install -r requirements.txt"
+        "cd secretfinder; pip install --user -r requirements.txt"
     ]
     PROJECT_URL = "https://github.com/m4ll0k/SecretFinder"
 
@@ -128,6 +133,7 @@ class SecretFinder(HackingTool):
 
 class Shodan(HackingTool):
     TITLE = "Find Info Using Shodan"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Get ports, vulnerabilities, information, banners,..etc \n " \
                   "for any IP with Shodan (no apikey! no rate limit!)\n" \
                   "[X] Don't use this tool because your ip will be blocked by Shodan!"
@@ -140,6 +146,7 @@ class Shodan(HackingTool):
 
 class PortScannerRanger(HackingTool):
     TITLE = "Port Scanner - rang3r"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "rang3r is a python script which scans in multi thread\n " \
                   "all alive hosts within your range that you specify."
     INSTALL_COMMANDS = [
@@ -159,6 +166,7 @@ class PortScannerRanger(HackingTool):
 
 class Breacher(HackingTool):
     TITLE = "Breacher"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "An advanced multithreaded admin panel finder written in python."
     INSTALL_COMMANDS = ["git clone https://github.com/s0md3v/Breacher.git"]
     PROJECT_URL = "https://github.com/s0md3v/Breacher"
@@ -175,6 +183,7 @@ class Breacher(HackingTool):
 
 class TheHarvester(HackingTool):
     TITLE = "theHarvester (OSINT)"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = (
         "Gather emails, names, subdomains, IPs and URLs from public sources.\n"
         "Usage: theHarvester -d example.com -b all"
@@ -231,6 +240,7 @@ class RustScan(HackingTool):
 
 class Holehe(HackingTool):
     TITLE = "Holehe (Email → Social Accounts)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Check if an email address is registered on 120+ websites.\n"
         "Usage: holehe user@example.com"
@@ -242,6 +252,7 @@ class Holehe(HackingTool):
 
 class Maigret(HackingTool):
     TITLE = "Maigret (Username OSINT)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Collect a dossier on a person by username across 3000+ sites.\n"
         "Usage: maigret <username>"
@@ -253,6 +264,7 @@ class Maigret(HackingTool):
 
 class Httpx(HackingTool):
     TITLE = "httpx (HTTP Toolkit)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Fast multi-purpose HTTP probing tool.\n"
         "Usage: httpx -l urls.txt -status-code -title -tech-detect"
@@ -267,6 +279,7 @@ class Httpx(HackingTool):
 
 class SpiderFoot(HackingTool):
     TITLE = "SpiderFoot (OSINT Automation)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Automates OSINT collection for threat intelligence and attack surface mapping."
     INSTALL_COMMANDS = ["pip install --user spiderfoot"]
     RUN_COMMANDS = ["spiderfoot -h"]
@@ -275,6 +288,7 @@ class SpiderFoot(HackingTool):
 
 class Subfinder(HackingTool):
     TITLE = "Subfinder (Subdomain Enumeration)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Fast passive subdomain enumeration using multiple sources."
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -286,6 +300,7 @@ class Subfinder(HackingTool):
 
 class TruffleHog(HackingTool):
     TITLE = "TruffleHog (Secret Scanner)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Find, verify, and analyze leaked credentials across git repos, S3 buckets, filesystems."
     INSTALL_COMMANDS = ["pip install --user trufflehog"]
     RUN_COMMANDS = ["trufflehog --help"]
@@ -294,6 +309,7 @@ class TruffleHog(HackingTool):
 
 class Gitleaks(HackingTool):
     TITLE = "Gitleaks (Git Secret Scanner)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Fast secret scanner for git repos — detects hardcoded passwords, API keys, tokens."
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -305,6 +321,7 @@ class Gitleaks(HackingTool):
 
 class Uncover(HackingTool):
     TITLE = "Uncover (Multi-Engine Search)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Query multiple search engines (Shodan, Censys, FOFA, Hunter, Quake) from CLI."
     INSTALL_COMMANDS = ["go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest"]
     PROJECT_URL = "https://github.com/projectdiscovery/uncover"
@@ -312,6 +329,7 @@ class Uncover(HackingTool):
 
 class Alterx(HackingTool):
     TITLE = "Alterx (Subdomain Wordlist Generator)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "DSL-based subdomain wordlist permutation generator for targeted enumeration."
     INSTALL_COMMANDS = ["go install -v github.com/projectdiscovery/alterx/cmd/alterx@latest"]
     PROJECT_URL = "https://github.com/projectdiscovery/alterx"
@@ -319,10 +337,25 @@ class Alterx(HackingTool):
 
 class ReconNg(HackingTool):
     TITLE = "Recon-ng (OSINT Framework)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Full-featured OSINT web reconnaissance framework with modular design."
     INSTALL_COMMANDS = ["pip install --user recon-ng"]
     RUN_COMMANDS = ["recon-ng"]
     PROJECT_URL = "https://github.com/lanmaster53/recon-ng"
+
+
+class GitDorker(HackingTool):
+    TITLE = "GitDorker (GitHub Secret Finder)"
+    SUPPORTED_OS = ["linux", "macos"]
+    DESCRIPTION = "GitHub dorking tool to find sensitive info and secrets using GitHub Search API."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/obheda12/GitDorker.git",
+        "cd GitDorker && pip install --user -r requirements.txt",
+    ]
+    PROJECT_URL = "https://github.com/obheda12/GitDorker"
+
+    def __init__(self):
+        super().__init__(runnable=False)
 
 
 class InformationGatheringTools(HackingToolsCollection):
@@ -353,6 +386,7 @@ class InformationGatheringTools(HackingToolsCollection):
         Uncover(),
         Alterx(),
         ReconNg(),
+        GitDorker(),
     ]
 
 if __name__ == "__main__":

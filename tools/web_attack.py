@@ -7,6 +7,7 @@ from rich.prompt import Prompt
 
 class Web2Attack(HackingTool):
     TITLE = "Web2Attack"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Web hacking framework with tools, exploits by python"
     INSTALL_COMMANDS = [
         "git clone https://github.com/santatic/web2attack.git"
@@ -33,6 +34,7 @@ class Skipfish(HackingTool):
 
 class SubDomainFinder(HackingTool):
     TITLE = "SubDomain Finder"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
         "Sublist3r is a python tool designed to enumerate "
         "subdomains of websites using OSINT \n "
@@ -40,9 +42,9 @@ class SubDomainFinder(HackingTool):
         "[2] python3 sublist3r.py -d example.com -p 80,443"
     )
     INSTALL_COMMANDS = [
-        "sudo pip3 install requests argparse dnspython",
+        "pip install --user requests argparse dnspython",
         "git clone https://github.com/aboul3la/Sublist3r.git",
-        "cd Sublist3r && sudo pip3 install -r requirements.txt"
+        "cd Sublist3r && pip install --user -r requirements.txt"
     ]
     RUN_COMMANDS = ["cd Sublist3r && python3 sublist3r.py -h"]
     PROJECT_URL = "https://github.com/aboul3la/Sublist3r"
@@ -50,6 +52,7 @@ class SubDomainFinder(HackingTool):
 
 class CheckURL(HackingTool):
     TITLE = "CheckURL"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
         "Detect evil urls that uses IDN Homograph Attack.\n\t"
         "[!] python3 checkURL.py --url google.com"
@@ -61,6 +64,7 @@ class CheckURL(HackingTool):
 
 class SubDomainTakeOver(HackingTool):
     TITLE = "Sub-Domain TakeOver"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = (
         "Sub-domain takeover vulnerability occur when a sub-domain "
         "\n (subdomain.example.com) is pointing to a service "
@@ -79,6 +83,7 @@ class SubDomainTakeOver(HackingTool):
 
 class Dirb(HackingTool):
     TITLE = "Dirb"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = (
         "DIRB is a Web Content Scanner. It looks for existing "
         "(and/or hidden) Web Objects.\n"
@@ -98,6 +103,7 @@ class Dirb(HackingTool):
 
 class Nuclei(HackingTool):
     TITLE = "Nuclei (Vulnerability Scanner)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Fast, template-based vulnerability scanner used by 50k+ security teams.\n"
         "Usage: nuclei -u https://example.com"
@@ -113,6 +119,7 @@ class Nuclei(HackingTool):
 
 class Ffuf(HackingTool):
     TITLE = "ffuf (Web Fuzzer)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Fast web fuzzer — content discovery, parameter fuzzing, vhost discovery.\n"
         "Usage: ffuf -w wordlist.txt -u https://example.com/FUZZ"
@@ -154,6 +161,7 @@ class Nikto(HackingTool):
 
 class Wafw00f(HackingTool):
     TITLE = "wafw00f (WAF Detector)"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = (
         "Fingerprint and identify Web Application Firewalls (WAF).\n"
         "Usage: wafw00f https://example.com"
@@ -168,6 +176,7 @@ class Wafw00f(HackingTool):
 
 class Katana(HackingTool):
     TITLE = "Katana (Web Crawler)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Next-generation crawling and spidering framework from ProjectDiscovery.\n"
         "Usage: katana -u https://example.com"
@@ -182,6 +191,7 @@ class Katana(HackingTool):
 
 class Gobuster(HackingTool):
     TITLE = "Gobuster (Dir/DNS/Vhost Brute Force)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Directory/file, DNS, and vhost brute-forcing tool written in Go."
     REQUIRES_GO = True
     INSTALL_COMMANDS = ["go install github.com/OJ/gobuster/v3@latest"]
@@ -191,6 +201,7 @@ class Gobuster(HackingTool):
 
 class Dirsearch(HackingTool):
     TITLE = "Dirsearch (Web Path Discovery)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Web path brute-forcing tool for discovering directories and files on web servers."
     INSTALL_COMMANDS = ["pip install --user dirsearch"]
     RUN_COMMANDS = ["dirsearch --help"]
@@ -208,6 +219,7 @@ class OwaspZap(HackingTool):
 
 class TestSSL(HackingTool):
     TITLE = "testssl.sh (TLS/SSL Checker)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Check TLS/SSL ciphers, protocols, and cryptographic flaws on any port."
     INSTALL_COMMANDS = ["git clone https://github.com/drwetter/testssl.sh.git"]
     RUN_COMMANDS = ["cd testssl.sh && ./testssl.sh --help"]
@@ -216,6 +228,7 @@ class TestSSL(HackingTool):
 
 class Arjun(HackingTool):
     TITLE = "Arjun (HTTP Parameter Discovery)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "HTTP parameter discovery suite that finds hidden GET/POST parameters."
     INSTALL_COMMANDS = ["pip install --user arjun"]
     RUN_COMMANDS = ["arjun --help"]
@@ -235,6 +248,7 @@ class Caido(HackingTool):
 
 class Mitmproxy(HackingTool):
     TITLE = "mitmproxy (Intercepting Proxy)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Interactive TLS-capable intercepting HTTP proxy for pentesters and developers."
     INSTALL_COMMANDS = ["pip install --user mitmproxy"]
     RUN_COMMANDS = ["mitmproxy --version"]
@@ -243,6 +257,7 @@ class Mitmproxy(HackingTool):
 
 class Corsy(HackingTool):
     TITLE = "Corsy (CORS Misconfiguration Scanner)"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = "Scan for CORS misconfigurations that allow cross-origin data theft."
     INSTALL_COMMANDS = [
         "git clone https://github.com/s0md3v/Corsy.git",
@@ -253,9 +268,40 @@ class Corsy(HackingTool):
 
 class CRLFuzz(HackingTool):
     TITLE = "CRLFuzz (CRLF Injection Scanner)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Fast tool to scan CRLF vulnerability in web applications."
     INSTALL_COMMANDS = ["go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest"]
     PROJECT_URL = "https://github.com/dwisiswant0/crlfuzz"
+
+
+class LinkFinder(HackingTool):
+    TITLE = "LinkFinder (JS Endpoint Discovery)"
+    SUPPORTED_OS = ["linux", "macos"]
+    DESCRIPTION = "Discover endpoints and API paths hidden inside JavaScript files."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/GerbenJavado/LinkFinder.git",
+        "cd LinkFinder && pip install --user -r requirements.txt",
+    ]
+    PROJECT_URL = "https://github.com/GerbenJavado/LinkFinder"
+
+    def run(self):
+        url = Prompt.ask("Enter JS file URL")
+        subprocess.run(["python3", "linkfinder.py", "-i", url, "-o", "cli"])
+
+
+class WhatWaf(HackingTool):
+    TITLE = "WhatWaf (WAF Detection & Bypass)"
+    SUPPORTED_OS = ["linux", "macos"]
+    DESCRIPTION = "Detect and attempt to bypass web application firewalls and protection systems."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/Ekultek/WhatWaf.git",
+        "cd WhatWaf && pip install --user -r requirements.txt",
+    ]
+    PROJECT_URL = "https://github.com/Ekultek/WhatWaf"
+
+    def run(self):
+        url = Prompt.ask("Enter target URL")
+        subprocess.run(["python3", "whatwaf", "-u", url])
 
 
 class WebAttackTools(HackingToolsCollection):
@@ -283,6 +329,8 @@ class WebAttackTools(HackingToolsCollection):
         Mitmproxy(),
         Corsy(),
         CRLFuzz(),
+        LinkFinder(),
+        WhatWaf(),
     ]
 
 if __name__ == "__main__":

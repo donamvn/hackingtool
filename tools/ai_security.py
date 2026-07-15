@@ -7,6 +7,7 @@ from rich.prompt import Prompt
 
 class PyRIT(HackingTool):
     TITLE = "PyRIT (AI Red Teaming)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Microsoft Python Risk Identification Toolkit for red-teaming generative AI and LLM systems."
     INSTALL_COMMANDS = ["pip install --user pyrit"]
     PROJECT_URL = "https://github.com/Azure/PyRIT"
@@ -17,6 +18,7 @@ class PyRIT(HackingTool):
 
 class Garak(HackingTool):
     TITLE = "Garak (LLM Vulnerability Scanner)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "NVIDIA's LLM vulnerability scanner — probes for hallucination, data leakage, prompt injection, toxicity."
     INSTALL_COMMANDS = ["pip install --user garak"]
     PROJECT_URL = "https://github.com/NVIDIA/garak"

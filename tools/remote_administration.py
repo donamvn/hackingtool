@@ -6,6 +6,7 @@ from rich.prompt import Prompt
 
 class PwndropServer(HackingTool):
     TITLE = "pwndrop (File Hosting for Red Team)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Self-deployable file hosting service with anti-crawl protection for red team payloads."
     INSTALL_COMMANDS = [
         "go install github.com/kgretzky/pwndrop@latest",

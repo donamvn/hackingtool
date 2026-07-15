@@ -7,6 +7,7 @@ from rich import box
 
 class HashBuster(HackingTool):
     TITLE = "Hash Buster"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Features: \n " \
                   "Automatic hash type identification \n " \
                   "Supports MD5, SHA1, SHA256, SHA384, SHA512"

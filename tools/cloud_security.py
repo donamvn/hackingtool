@@ -42,6 +42,7 @@ class Trivy(HackingTool):
 
 class CDK(HackingTool):
     TITLE = "CDK (Container/K8s Pentesting)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Zero-dependency container/K8s penetration toolkit for escaping and lateral movement."
     INSTALL_COMMANDS = [
         "curl -sSL https://github.com/cdk-team/CDK/releases/latest/download/cdk_linux_amd64 -o cdk",
@@ -52,6 +53,7 @@ class CDK(HackingTool):
 
 class Kubescape(HackingTool):
     TITLE = "Kubescape (K8s Security Scanner)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Kubernetes security platform — risk analysis, compliance, misconfiguration scanning."
     INSTALL_COMMANDS = ["curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash"]
     PROJECT_URL = "https://github.com/kubescape/kubescape"

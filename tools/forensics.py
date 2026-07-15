@@ -93,6 +93,7 @@ class Toolsley(HackingTool):
 
 class Volatility3(HackingTool):
     TITLE = "Volatility 3 (Memory Forensics)"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = (
         "The world's most widely used memory forensics framework.\n"
         "Usage: python3 vol.py -f memory.dmp windows.pslist"
@@ -117,6 +118,7 @@ class Volatility3(HackingTool):
 
 class Binwalk(HackingTool):
     TITLE = "Binwalk (Firmware Analysis)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = (
         "Analyze, reverse engineer, and extract firmware images.\n"
         "Usage: binwalk -e firmware.bin"

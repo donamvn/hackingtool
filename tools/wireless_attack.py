@@ -119,7 +119,7 @@ class Howmanypeople(HackingTool):
         # Bug 14 fix: missing comma caused "sudo apt-get install tshark;sudo python3..."
         # to be one implicitly concatenated string — only first command ran
         "sudo apt-get install -y tshark",
-        "sudo python3 -m pip install howmanypeoplearearound",
+        "pip install --user howmanypeoplearearound",
     ]
     RUN_COMMANDS = ["howmanypeoplearearound"]
     SUPPORTED_OS = ["linux"]
@@ -181,6 +181,19 @@ class Bettercap(HackingTool):
     PROJECT_URL = "https://github.com/bettercap/bettercap"
 
 
+class Esp8266Deauther(HackingTool):
+    TITLE = "ESP8266 Deauther (Hardware WiFi Deauth)"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
+    DESCRIPTION = "Scan for WiFi devices, perform deauth attacks, create beacons — runs on ESP8266 hardware."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/SpacehuhnTech/esp8266_deauther.git",
+    ]
+    PROJECT_URL = "https://github.com/SpacehuhnTech/esp8266_deauther"
+
+    def __init__(self):
+        super().__init__(runnable=False)
+
+
 class WirelessAttackTools(HackingToolsCollection):
     TITLE = "Wireless attack tools"
     TOOLS = [
@@ -195,6 +208,7 @@ class WirelessAttackTools(HackingToolsCollection):
         Hcxdumptool(),
         Hcxtools(),
         Bettercap(),
+        Esp8266Deauther(),
     ]
 
 

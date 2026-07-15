@@ -11,6 +11,7 @@ from core import HackingTool, HackingToolsCollection, console
 
 class Cupp(HackingTool):
     TITLE = "Cupp"
+    SUPPORTED_OS = ["linux"]
     # Bug 24 fix: DESCRIPTION was copy-pasted from WlCreator — completely wrong
     DESCRIPTION = "Common User Passwords Profiler — generates personalized wordlists based on target info."
     INSTALL_COMMANDS = ["git clone https://github.com/Mebus/cupp.git"]
@@ -30,6 +31,7 @@ class Cupp(HackingTool):
 
 class WlCreator(HackingTool):
     TITLE = "WordlistCreator"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "WlCreator is a C program that can create all possibilities" \
                   " of passwords,\n and you can choose Length, Lowercase, " \
                   "Capital, Numbers and Special Chars"
@@ -51,6 +53,7 @@ class WlCreator(HackingTool):
 
 class GoblinWordGenerator(HackingTool):
     TITLE = "Goblin WordGenerator"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Goblin WordGenerator"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/GoblinWordGenerator.git"]
@@ -70,6 +73,7 @@ class GoblinWordGenerator(HackingTool):
 
 class showme(HackingTool):
     TITLE = "Password list (1.4 Billion Clear Text Password)"
+    SUPPORTED_OS = ["linux"]
     DESCRIPTION = "This tool allows you to perform OSINT and reconnaissance on " \
                   "an organisation or an individual. It allows one to search " \
                   "1.4 Billion clear text credentials which was dumped as " \
@@ -77,7 +81,7 @@ class showme(HackingTool):
                   "finding passwords faster and easier than ever before."
     INSTALL_COMMANDS = [
         "git clone https://github.com/Viralmaniar/SMWYG-Show-Me-What-You-Got.git",
-        "cd SMWYG-Show-Me-What-You-Got && pip3 install -r requirements.txt"
+        "cd SMWYG-Show-Me-What-You-Got && pip install --user -r requirements.txt"
     ]
     RUN_COMMANDS = ["cd SMWYG-Show-Me-What-You-Got && python SMWYG.py"]
     PROJECT_URL = "https://github.com/Viralmaniar/SMWYG-Show-Me-What-You-Got"
@@ -119,6 +123,7 @@ class JohnTheRipper(HackingTool):
 
 class Haiti(HackingTool):
     TITLE = "haiti (Hash Type Identifier)"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = (
         "Identify hash types — supports 300+ algorithms.\n"
         "Usage: haiti <hash>"

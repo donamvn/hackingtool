@@ -8,9 +8,10 @@ from rich.prompt import Prompt
 
 class AndroGuard(HackingTool):
     TITLE = "Androguard"
+    SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Androguard is a Reverse engineering, Malware and goodware " \
                   "analysis of Android applications and more"
-    INSTALL_COMMANDS = ["sudo pip3 install -U androguard"]
+    INSTALL_COMMANDS = ["pip install --user -U androguard"]
     PROJECT_URL = "https://github.com/androguard/androguard "
 
     def __init__(self):
@@ -34,6 +35,7 @@ class Apk2Gold(HackingTool):
 
 class Jadx(HackingTool):
     TITLE = "JadX"
+    SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = "Jadx is Dex to Java decompiler.\n" \
                   "[*] decompile Dalvik bytecode to java classes from APK, dex," \
                   " aar and zip files\n" \
