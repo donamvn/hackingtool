@@ -4,38 +4,53 @@
 
 <p><b>All-in-One Hacking Tool for Security Researchers & Pentesters</b></p>
 
-[![License](https://img.shields.io/github/license/Z4nzu/hackingtool)](LICENSE)&nbsp;
+[![License](https://img.shields.io/github/license/donamvn/hackingtool)](LICENSE)&nbsp;
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)&nbsp;
-[![Version](https://img.shields.io/badge/v2.0.0-00FF88?style=flat-square)](#)&nbsp;
-[![Stars](https://img.shields.io/github/stars/Z4nzu/hackingtool?style=flat-square&color=yellow)](https://github.com/Z4nzu/hackingtool/stargazers)&nbsp;
-[![Forks](https://img.shields.io/github/forks/Z4nzu/hackingtool?style=flat-square&color=blue)](https://github.com/Z4nzu/hackingtool/network/members)&nbsp;
-[![Issues](https://img.shields.io/github/issues/Z4nzu/hackingtool?style=flat-square&color=red)](https://github.com/Z4nzu/hackingtool/issues)&nbsp;
-[![Last Commit](https://img.shields.io/github/last-commit/Z4nzu/hackingtool?style=flat-square&color=00FF88)](https://github.com/Z4nzu/hackingtool/commits/master)
+[![Version](https://img.shields.io/badge/v2.1.0-00FF88?style=flat-square)](#)&nbsp;
+[![Stars](https://img.shields.io/github/stars/donamvn/hackingtool?style=flat-square&color=yellow)](https://github.com/donamvn/hackingtool/stargazers)&nbsp;
+[![Forks](https://img.shields.io/github/forks/donamvn/hackingtool?style=flat-square&color=blue)](https://github.com/donamvn/hackingtool/network/members)&nbsp;
+[![Issues](https://img.shields.io/github/issues/donamvn/hackingtool?style=flat-square&color=red)](https://github.com/donamvn/hackingtool/issues)&nbsp;
+[![Last Commit](https://img.shields.io/github/last-commit/donamvn/hackingtool?style=flat-square&color=00FF88)](https://github.com/donamvn/hackingtool/commits/master)
 
-![](https://img.shields.io/badge/20_Categories-7B61FF?style=for-the-badge)
-![](https://img.shields.io/badge/185+_Tools-00FF88?style=for-the-badge)
+![](https://img.shields.io/badge/21_Categories-7B61FF?style=for-the-badge)
+![](https://img.shields.io/badge/140+_Tools-00FF88?style=for-the-badge)
 ![](https://img.shields.io/badge/19_Tags-FF61DC?style=for-the-badge)
-![](https://img.shields.io/badge/Linux_%7C_Kali_%7C_Parrot_%7C_macOS-FFA116?style=for-the-badge&logo=linux&logoColor=white)
+![](https://img.shields.io/badge/Linux_%7C_Kali_%7C_Parrot_%7C_macOS_%7C_Windows-FFA116?style=for-the-badge&logo=linux&logoColor=white)
 
 <a href="#installation"><img src="https://img.shields.io/badge/Install_Now-00FF88?style=for-the-badge&logo=rocket&logoColor=black" alt="Install Now"></a>&nbsp;
 <a href="#quick-commands"><img src="https://img.shields.io/badge/Quick_Commands-7B61FF?style=for-the-badge&logo=terminal&logoColor=white" alt="Quick Commands"></a>&nbsp;
-<a href="https://github.com/Z4nzu/hackingtool/issues/new?template=tool_request.md"><img src="https://img.shields.io/badge/Suggest_a_Tool-FF61DC?style=for-the-badge&logo=plus&logoColor=white" alt="Suggest a Tool"></a>
+<a href="https://github.com/donamvn/hackingtool/issues/new?template=tool_request.md"><img src="https://img.shields.io/badge/Suggest_a_Tool-FF61DC?style=for-the-badge&logo=plus&logoColor=white" alt="Suggest a Tool"></a>
 
 </div>
 
 ---
 
 
-## What's New in v2.0.0
+## What's New in v2.1.0
 
 <table>
 <tr><td>
 
 | | Feature | Description |
 |:---:|---|---|
+| **🧹** | **24 dead tools removed** | Archived, 404, inactive 5+ years — all cleaned out |
+| **🆕** | **18 new tools added** | Ghauri, Villain, Coercer, PyRIT, Garak, CDK, Kubescape, LinkFinder, WhatWaf... |
+| **🤖** | **AI/LLM Security** | New category: PyRIT (Microsoft) + Garak (NVIDIA) for AI red-teaming |
+| **🖥** | **SUPPORTED_OS everywhere** | Every tool declares Linux/macOS/Windows compatibility |
+| **📦** | **pip standardized** | All `sudo pip` replaced with `pip install --user` |
+| **🔗** | **URLs verified** | All GitHub URLs checked 2026-07, dead links removed |
+| **📋** | **Research doc** | UPGRADE-RESEARCH-2026.md documents full methodology |
+
+</td></tr>
+</table>
+
+<details>
+<summary><b>v2.0.0 features (inherited)</b></summary>
+
+| | Feature | Description |
+|:---:|---|---|
 | **🐍** | **Python 3.10+** | All Python 2 code removed, modern syntax throughout |
 | **🖥** | **OS-aware menus** | Linux-only tools hidden automatically on macOS |
-| **📦** | **185+ tools** | 35 new modern tools added across 6 categories |
 | **🔍** | **Search** | Type `/` to search all tools by name, description, or keyword |
 | **🏷** | **Tag filter** | Type `t` to filter by 19 tags — osint, web, c2, cloud, mobile... |
 | **💡** | **Recommend** | Type `r` — "I want to scan a network" → shows relevant tools |
@@ -44,11 +59,9 @@
 | **🔄** | **Smart update** | Each tool has Update — auto-detects git pull / pip upgrade / go install |
 | **📂** | **Open folder** | Jump into any tool's directory for manual inspection |
 | **🐳** | **Docker** | Builds locally — no unverified external images |
-| **🚀** | **One-liner install** | `curl -sSL .../install.sh \| sudo bash` — zero manual steps |
-| **🏢** | **3 new categories** | Active Directory, Cloud Security, Mobile Security |
+| **🏢** | **4 new categories** | Active Directory, Cloud Security, Mobile Security, AI/LLM Security |
 
-</td></tr>
-</table>
+</details>
 
 
 
@@ -438,7 +451,7 @@ Required: class in `tools/*.py`, TITLE, DESCRIPTION, INSTALL/RUN commands, SUPPO
 ### One-liner (recommended)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/Z4nzu/hackingtool/master/install.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/donamvn/hackingtool/master/install.sh | sudo bash
 ```
 
 Handles everything — prerequisites, clone, venv, launcher.
@@ -449,7 +462,7 @@ Handles everything — prerequisites, clone, venv, launcher.
 ### Manual
 
 ```bash
-git clone https://github.com/Z4nzu/hackingtool.git
+git clone https://github.com/donamvn/hackingtool.git
 cd hackingtool
 sudo python3 install.py
 ```
@@ -503,9 +516,9 @@ pip install -r requirements.txt
 ## Star History
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date" />
-  <img alt="HackingTool Star History Chart" src="https://api.star-history.com/svg?repos=Z4nzu/hackingtool&type=Date" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=donamvn/hackingtool&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=donamvn/hackingtool&type=Date" />
+  <img alt="HackingTool Star History Chart" src="https://api.star-history.com/svg?repos=donamvn/hackingtool&type=Date" />
 </picture>
 
 ---
@@ -524,4 +537,4 @@ If this project helps you, consider buying me a coffee:
 > **For authorized security testing only.**
 > Thanks to all original authors of the tools included in hackingtool.
 
-Your favourite tool is not listed? [Suggest it here](https://github.com/Z4nzu/hackingtool/issues/new?template=tool_request.md)
+Your favourite tool is not listed? [Suggest it here](https://github.com/donamvn/hackingtool/issues/new?template=tool_request.md)

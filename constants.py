@@ -3,13 +3,13 @@ import platform
 import shutil as _shutil
 
 # ── Repository ────────────────────────────────────────────────────────────────
-REPO_OWNER   = "Z4nzu"
+REPO_OWNER   = "donamvn"
 REPO_NAME    = "hackingtool"
 REPO_URL     = f"https://github.com/{REPO_OWNER}/{REPO_NAME}.git"
 REPO_WEB_URL = f"https://github.com/{REPO_OWNER}/{REPO_NAME}"
 
 # ── Versioning ────────────────────────────────────────────────────────────────
-VERSION         = "2.0.0"
+VERSION         = "2.1.0"
 VERSION_DISPLAY = f"v{VERSION}"
 
 # ── Python requirement ────────────────────────────────────────────────────────

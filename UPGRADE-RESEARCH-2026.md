@@ -157,23 +157,27 @@
 
 ## Phase 5: Implementation Priority
 
-### Batch 1 (Critical — do now)
+### Batch 1 (Critical) — DONE 2026-07-15
 - [x] Remove 24 dead/404/archived tools
 - [x] Fix 2 moved URLs (Blazy, XSStrike)
 - [x] Add HIGH priority new tools (12 tools)
 
-### Batch 2 (Important — next session)
-- [ ] Add MEDIUM priority new tools (8 tools)
-- [ ] Add SUPPORTED_OS to all existing tools
-- [ ] Standardize install commands
-- [ ] Add Windows install alternatives
+### Batch 2 (Important) — DONE 2026-07-15
+- [x] Add MEDIUM priority new tools (6 tools: LinkFinder, WhatWaf, GitDorker, Ldapdomaindump, ESP8266 Deauther, Starkiller)
+- [x] Add SUPPORTED_OS to all existing tools
+- [x] Standardize install commands (all sudo pip → pip install --user)
 
-### Batch 3 (Polish — future)
-- [ ] Add TAGS field
-- [ ] Add LAST_VERIFIED field
-- [ ] Rewrite README with current tool count
-- [ ] Add Docker support for all tools
+### Batch 3 (Polish) — DONE 2026-07-15
+- [x] Update constants.py: repo owner → donamvn, version → 2.1.0
+- [x] Rewrite README: badges, What's New v2.1.0, correct tool count
+
+### Batch 4 (Future — next session)
+- [ ] Add TAGS field to HackingTool base class
+- [ ] Add LAST_VERIFIED date field
+- [ ] Add Windows install alternatives (winget/scoop/choco)
+- [ ] Add Docker support for more tools
 - [ ] CI: auto-check repo URLs monthly
+- [ ] Integrate tool catalog into reverse-skill as reference
 
 ---
 
