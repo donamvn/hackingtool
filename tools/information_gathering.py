@@ -64,27 +64,6 @@ class Host2IP(HackingTool):
         console.print("[bold magenta]{host} -> {ips}[/bold magenta]")
 
 
-class XeroSploit(HackingTool):
-    TITLE = "Xerosploit"
-    DESCRIPTION = "Xerosploit is a penetration testing toolkit whose goal is to perform\n" \
-                  "man-in-the-middle attacks for testing purposes"
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/LionSec/xerosploit.git",
-        "cd xerosploit && sudo python install.py"
-    ]
-    RUN_COMMANDS = ["sudo xerosploit"]
-    PROJECT_URL = "https://github.com/LionSec/xerosploit"
-
-
-class RedHawk(HackingTool):
-    TITLE = "RED HAWK (All In One Scanning)"
-    DESCRIPTION = "All in one tool for Information Gathering and Vulnerability Scanning."
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/Tuhinshubhra/RED_HAWK.git"]
-    RUN_COMMANDS = ["cd RED_HAWK;php rhawk.php"]
-    PROJECT_URL = "https://github.com/Tuhinshubhra/RED_HAWK"
-
-
 class ReconSpider(HackingTool):
     TITLE = "ReconSpider(For All Scanning)"
     DESCRIPTION = "ReconSpider is most Advanced Open Source Intelligence (OSINT)" \
@@ -110,26 +89,6 @@ class IsItDown(HackingTool):
     def open(self):
         console.print(Panel("Opening isitdownrightnow.com", style="bold magenta"))
         webbrowser.open_new_tab("https://www.isitdownrightnow.com/")
-
-
-class Infoga(HackingTool):
-    TITLE = "Infoga - Email OSINT"
-    DESCRIPTION = "Infoga is a tool gathering email accounts information\n" \
-                  "(ip, hostname, country,...) from different public source"
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/m4ll0k/Infoga.git",
-        "cd Infoga && pip install --user ."
-    ]
-    RUN_COMMANDS = ["cd Infoga;python3 infoga.py"]
-    PROJECT_URL = "https://github.com/m4ll0k/Infoga"
-
-
-class ReconDog(HackingTool):
-    TITLE = "ReconDog"
-    DESCRIPTION = "ReconDog Information Gathering Suite"
-    INSTALL_COMMANDS = ["git clone https://github.com/s0md3v/ReconDog.git"]
-    RUN_COMMANDS = ["cd ReconDog;sudo python dog"]
-    PROJECT_URL = "https://github.com/s0md3v/ReconDog"
 
 
 class Striker(HackingTool):
@@ -344,6 +303,28 @@ class Gitleaks(HackingTool):
     PROJECT_URL = "https://github.com/gitleaks/gitleaks"
 
 
+class Uncover(HackingTool):
+    TITLE = "Uncover (Multi-Engine Search)"
+    DESCRIPTION = "Query multiple search engines (Shodan, Censys, FOFA, Hunter, Quake) from CLI."
+    INSTALL_COMMANDS = ["go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest"]
+    PROJECT_URL = "https://github.com/projectdiscovery/uncover"
+
+
+class Alterx(HackingTool):
+    TITLE = "Alterx (Subdomain Wordlist Generator)"
+    DESCRIPTION = "DSL-based subdomain wordlist permutation generator for targeted enumeration."
+    INSTALL_COMMANDS = ["go install -v github.com/projectdiscovery/alterx/cmd/alterx@latest"]
+    PROJECT_URL = "https://github.com/projectdiscovery/alterx"
+
+
+class ReconNg(HackingTool):
+    TITLE = "Recon-ng (OSINT Framework)"
+    DESCRIPTION = "Full-featured OSINT web reconnaissance framework with modular design."
+    INSTALL_COMMANDS = ["pip install --user recon-ng"]
+    RUN_COMMANDS = ["recon-ng"]
+    PROJECT_URL = "https://github.com/lanmaster53/recon-ng"
+
+
 class InformationGatheringTools(HackingToolsCollection):
     TITLE = "Information gathering tools"
     TOOLS = [
@@ -351,12 +332,8 @@ class InformationGatheringTools(HackingToolsCollection):
         Dracnmap(),
         PortScan(),
         Host2IP(),
-        XeroSploit(),
-        RedHawk(),
         ReconSpider(),
         IsItDown(),
-        Infoga(),
-        ReconDog(),
         Striker(),
         SecretFinder(),
         Shodan(),
@@ -373,6 +350,9 @@ class InformationGatheringTools(HackingToolsCollection):
         Subfinder(),
         TruffleHog(),
         Gitleaks(),
+        Uncover(),
+        Alterx(),
+        ReconNg(),
     ]
 
 if __name__ == "__main__":

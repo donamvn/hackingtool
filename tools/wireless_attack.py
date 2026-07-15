@@ -108,34 +108,6 @@ class Wifite(HackingTool):
     REQUIRES_WIFI = True
 
 
-class EvilTwin(HackingTool):
-    TITLE = "EvilTwin"
-    DESCRIPTION = (
-        "Fakeap — perform Evil Twin Attack by getting credentials "
-        "using a Fake page and Fake Access Point."
-    )
-    INSTALL_COMMANDS = ["git clone https://github.com/Z4nzu/fakeap.git"]
-    RUN_COMMANDS = ["cd fakeap && sudo bash fakeap.sh"]
-    PROJECT_URL = "https://github.com/Z4nzu/fakeap"
-    SUPPORTED_OS = ["linux"]
-    REQUIRES_WIFI = True
-
-
-class Fastssh(HackingTool):
-    TITLE = "Fastssh"
-    DESCRIPTION = (
-        "Fastssh — multi-threaded scan and brute force attack against SSH protocol\n"
-        "using the most commonly used credentials."
-    )
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/Z4nzu/fastssh.git && cd fastssh && chmod +x fastssh.sh",
-        "sudo apt-get install -y sshpass netcat",
-    ]
-    RUN_COMMANDS = ["cd fastssh && sudo bash fastssh.sh --scan"]
-    PROJECT_URL = "https://github.com/Z4nzu/fastssh"
-    SUPPORTED_OS = ["linux"]
-
-
 class Howmanypeople(HackingTool):
     TITLE = "Howmanypeople"
     DESCRIPTION = (
@@ -218,8 +190,6 @@ class WirelessAttackTools(HackingToolsCollection):
         Fluxion(),
         Wifiphisher(),
         Wifite(),
-        EvilTwin(),
-        Fastssh(),
         Howmanypeople(),
         Airgeddon(),
         Hcxdumptool(),

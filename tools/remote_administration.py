@@ -4,26 +4,19 @@ from rich.panel import Panel
 from rich.prompt import Prompt
 
 
-# Bug 17 fix: Stitch was defined in both payload_creator.py and remote_administration.py.
-# It is kept in payload_creator.py (its correct category) and removed from here.
-
-
-class Pyshell(HackingTool):
-    TITLE = "Pyshell"
-    DESCRIPTION = "Pyshell is a Rat Tool that can be able to download & upload " \
-                  "files,\n Execute OS Command and more.."
+class PwndropServer(HackingTool):
+    TITLE = "pwndrop (File Hosting for Red Team)"
+    DESCRIPTION = "Self-deployable file hosting service with anti-crawl protection for red team payloads."
     INSTALL_COMMANDS = [
-        "git clone https://github.com/knassar702/Pyshell.git;"
-        "pip install --user pyscreenshot python-nmap requests"
+        "go install github.com/kgretzky/pwndrop@latest",
     ]
-    RUN_COMMANDS = ["cd Pyshell;./Pyshell"]
-    PROJECT_URL = "https://github.com/knassar702/pyshell"
+    PROJECT_URL = "https://github.com/kgretzky/pwndrop"
 
 
 class RemoteAdministrationTools(HackingToolsCollection):
     TITLE = "Remote Administrator Tools (RAT)"
     TOOLS = [
-        Pyshell()
+        PwndropServer()
     ]
 
 if __name__ == "__main__":

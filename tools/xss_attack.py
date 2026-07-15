@@ -57,17 +57,6 @@ class XSSFinder(HackingTool):
         ))
 
 
-class XSSFreak(HackingTool):
-    TITLE = "XSS-Freak"
-    DESCRIPTION = "An XSS scanner fully written in Python 3 from scratch."
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/PR0PH3CY33/XSS-Freak.git",
-        "cd XSS-Freak;sudo pip3 install -r requirements.txt"
-    ]
-    RUN_COMMANDS = ["cd XSS-Freak;sudo python3 XSS-Freak.py"]
-    PROJECT_URL = "https://github.com/PR0PH3CY33/XSS-Freak"
-
-
 class XSpear(HackingTool):
     TITLE = "XSpear"
     DESCRIPTION = "XSpear is an XSS Scanner built on Ruby Gems."
@@ -76,65 +65,18 @@ class XSpear(HackingTool):
     PROJECT_URL = "https://github.com/hahwul/XSpear"
 
 
-class XSSCon(HackingTool):
-    TITLE = "XSSCon"
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/menkrep1337/XSSCon.git",
-        "sudo chmod 755 -R XSSCon"
-    ]
-    PROJECT_URL = "https://github.com/menkrep1337/XSSCon"
-
-    def run(self):
-        console.print(Panel.fit(
-            "Enter target website to scan with XSSCon:",
-            title="[bold yellow]XSSCon[/bold yellow]",
-            border_style="bright_yellow"
-        ))
-        website = Prompt.ask("[bold cyan]Enter Website[/bold cyan]")
-        from config import get_tools_dir
-        subprocess.run(["python3", "xsscon.py", "-u", website],
-                       cwd=str(get_tools_dir() / "XSSCon"))
-
-
-class XanXSS(HackingTool):
-    TITLE = "XanXSS"
-    DESCRIPTION = "Reflected XSS searching tool that creates payloads from templates."
-    INSTALL_COMMANDS = ["git clone https://github.com/Ekultek/XanXSS.git"]
-    PROJECT_URL = "https://github.com/Ekultek/XanXSS"
-
-    def run(self):
-        from config import get_tools_dir
-        subprocess.run(["python3", "xanxss.py", "-h"],
-                       cwd=str(get_tools_dir() / "XanXSS"))
-
-
 class XSSStrike(HackingTool):
     TITLE = "Advanced XSS Detection Suite"
     DESCRIPTION = "XSStrike is a Python-based tool designed to detect and exploit XSS vulnerabilities."
     INSTALL_COMMANDS = [
         "sudo rm -rf XSStrike",
-        "git clone https://github.com/UltimateHackers/XSStrike.git "
+        "git clone https://github.com/s0md3v/XSStrike.git "
         "&& cd XSStrike && pip install -r requirements.txt"
     ]
-    PROJECT_URL = "https://github.com/UltimateHackers/XSStrike"
+    PROJECT_URL = "https://github.com/s0md3v/XSStrike"
 
     def __init__(self):
         super().__init__(runnable=False)
-
-
-class RVuln(HackingTool):
-    TITLE = "RVuln"
-    SUPPORTED_OS = ["linux"]
-    DESCRIPTION = "Multi-threaded and Automated Web Vulnerability Scanner written in Rust."
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/iinc0gnit0/RVuln.git;"
-        "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;"
-        "source $HOME/.cargo/env;"
-        "sudo apt install librust-openssl-dev;"
-        "cd RVuln;sudo su;cargo build --release;mv target/release/RVuln"
-    ]
-    RUN_COMMANDS = ["RVuln"]
-    PROJECT_URL = "https://github.com/iinc0gnit0/RVuln"
 
 
 class XSSAttackTools(HackingToolsCollection):
@@ -143,12 +85,8 @@ class XSSAttackTools(HackingToolsCollection):
         Dalfox(),
         XSSPayloadGenerator(),
         XSSFinder(),
-        XSSFreak(),
         XSpear(),
-        XSSCon(),
-        XanXSS(),
         XSSStrike(),
-        RVuln()
     ]
 
     def show_info(self):

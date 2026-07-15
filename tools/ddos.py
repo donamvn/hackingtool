@@ -48,32 +48,6 @@ class SlowLoris(HackingTool):
         subprocess.run(["slowloris", target_site])
 
 
-class Asyncrone(HackingTool):
-    TITLE = "Asyncrone | Multifunction SYN Flood DDoS Weapon"
-    SUPPORTED_OS = ["linux"]
-    DESCRIPTION = (
-        "aSYNcrone is a C language based, multifunction SYN Flood DDoS Weapon.\n"
-        "Disable the destination system by sending SYN packets intensively."
-    )
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/fatih4842/aSYNcrone.git",
-        "cd aSYNcrone && sudo gcc aSYNcrone.c -o aSYNcrone -lpthread",
-    ]
-    PROJECT_URL = "https://github.com/fatihsnsy/aSYNcrone"
-
-    def run(self):
-        from config import get_tools_dir
-        source_port = Prompt.ask("Enter Source Port")
-        target_ip   = Prompt.ask("Enter Target IP")
-        target_port = Prompt.ask("Enter Target Port")
-        # Bug 5 fix: 1000 was int — subprocess requires all args str
-        # Bug 4 fix: removed os.system("cd aSYNcrone;") — use cwd= instead
-        subprocess.run(
-            ["sudo", "./aSYNcrone", str(source_port), str(target_ip), str(target_port), "1000"],
-            cwd=str(get_tools_dir() / "aSYNcrone"),
-        )
-
-
 class UFONet(HackingTool):
     TITLE = "UFOnet"
     SUPPORTED_OS = ["linux"]
@@ -89,53 +63,9 @@ class UFONet(HackingTool):
     PROJECT_URL = "https://github.com/epsylon/ufonet"
 
 
-class GoldenEye(HackingTool):
-    TITLE = "GoldenEye"
-    SUPPORTED_OS = ["linux"]
-    DESCRIPTION = (
-        "GoldenEye is a python3 app for SECURITY TESTING PURPOSES ONLY!\n"
-        "GoldenEye is a HTTP DoS Test Tool.\n"
-        "Usage: ./goldeneye.py <url> [OPTIONS]"
-    )
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/jseidl/GoldenEye.git",
-        "chmod -R 755 GoldenEye",
-    ]
-    PROJECT_URL = "https://github.com/jseidl/GoldenEye"
-
-    def run(self):
-        from config import get_tools_dir
-        # Bug 4 fix: removed os.system("cd GoldenEye; ...") — no-op cd subshell
-        url = Prompt.ask("Enter target URL")
-        subprocess.run(["sudo", "./goldeneye.py", url],
-                       cwd=str(get_tools_dir() / "GoldenEye"))
-
-
-class Saphyra(HackingTool):
-    TITLE = "SaphyraDDoS"
-    SUPPORTED_OS = ["linux"]
-    DESCRIPTION = "A Python DDoS script for SECURITY TESTING PURPOSES ONLY."
-    INSTALL_COMMANDS = [
-        # Bug 7 fix: removed "sudo su" (first step was dropping into interactive root shell)
-        "git clone https://github.com/anonymous24x7/Saphyra-DDoS.git",
-        "chmod +x Saphyra-DDoS/saphyra.py",
-    ]
-    PROJECT_URL = "https://github.com/anonymous24x7/Saphyra-DDoS"
-
-    def run(self):
-        from config import get_tools_dir
-        url = Prompt.ask("Enter URL")
-        # Vuln 1 fix: was os.system("python saphyra.py " + url) — command injection
-        # Now uses subprocess list form — url is never interpolated into a shell string
-        subprocess.run(
-            ["python3", "saphyra.py", url],
-            cwd=str(get_tools_dir() / "Saphyra-DDoS"),
-        )
-
-
 class DDOSTools(HackingToolsCollection):
     TITLE = "DDOS Attack Tools"
-    TOOLS = [DDoSTool(), SlowLoris(), Asyncrone(), UFONet(), GoldenEye(), Saphyra()]
+    TOOLS = [DDoSTool(), SlowLoris(), UFONet()]
 
 
 if __name__ == "__main__":

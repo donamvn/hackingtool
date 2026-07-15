@@ -45,6 +45,7 @@ from tools.xss_attack import XSSAttackTools
 from tools.active_directory import ActiveDirectoryTools
 from tools.cloud_security import CloudSecurityTools
 from tools.mobile_security import MobileSecurityTools
+from tools.ai_security import AISecurityTools
 
 # ── Tool registry ──────────────────────────────────────────────────────────────
 
@@ -71,6 +72,7 @@ tool_definitions = [
     ("Active Directory Tools",             "🏢",  "Active Directory"),
     ("Cloud Security Tools",               "☁ ",  "Cloud Security"),
     ("Mobile Security Tools",              "📱",  "Mobile Security"),
+    ("AI / LLM Security Tools",            "🤖",  "AI / LLM Security"),
     ("Other tools",                        "✨",  "Other Tools"),
     ("Update or Uninstall | Hackingtool",  "♻ ",  "Update / Uninstall"),
 ]
@@ -95,6 +97,7 @@ all_tools = [
     ActiveDirectoryTools(),
     CloudSecurityTools(),
     MobileSecurityTools(),
+    AISecurityTools(),
     OtherTools(),
     ToolManager(),
 ]

@@ -8,47 +8,6 @@ from rich.prompt import Prompt
 from rich import box
 
 
-class FacialFind(HackingTool):
-    TITLE = "Find SocialMedia By Facial Recognation System"
-    DESCRIPTION = "A Social Media Mapping Tool that correlates profiles\n " \
-                  "via facial recognition across different sites."
-    INSTALL_COMMANDS = [
-        "sudo apt install -y software-properties-common",
-        "sudo add-apt-repository ppa:mozillateam/firefox-next && sudo apt update && sudo apt upgrade",
-        "git clone https://github.com/Greenwolf/social_mapper.git",
-        "sudo apt install -y build-essential cmake libgtk-3-dev libboost-all-dev",
-        "cd social_mapper/setup",
-        "sudo python3 -m pip install --no-cache-dir -r requirements.txt",
-        'echo "[!]Now You have To do some Manually\n'
-        '[!] Install the Geckodriver for your operating system\n'
-        '[!] Copy & Paste Link And Download File As System Configuration\n'
-        '[#] https://github.com/mozilla/geckodriver/releases\n'
-        '[!!] On Linux you can place it in /usr/bin "| boxes | lolcat'
-    ]
-    PROJECT_URL = "https://github.com/Greenwolf/social_mapper"
-
-    def run(self):
-        from config import get_tools_dir
-        import subprocess
-        setup_dir = get_tools_dir() / "social_mapper" / "setup"
-        subprocess.run(["python3", "social_mapper.py", "-h"], cwd=str(setup_dir))
-        console.print(
-            "[bold magenta]Set username and password in social_mapper.py before running.[/]\n"
-            "[magenta]Usage: python social_mapper.py -f <folder> -i <path> -m fast <AcName> -fb -tw[/]"
-        )
-
-
-class FindUser(HackingTool):
-    TITLE = "Find SocialMedia By UserName"
-    DESCRIPTION = "Find usernames across over 75 social networks"
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/xHak9x/finduser.git",
-        "cd finduser && sudo chmod +x finduser.sh"
-    ]
-    RUN_COMMANDS = ["cd finduser && sudo bash finduser.sh"]
-    PROJECT_URL = "https://github.com/xHak9x/finduser"
-
-
 class Sherlock(HackingTool):
     TITLE = "Sherlock"
     DESCRIPTION = "Hunt down social media accounts by username across social networks \n " \
@@ -87,8 +46,6 @@ class SocialScan(HackingTool):
 class SocialMediaFinderTools(HackingToolsCollection):
     TITLE = "SocialMedia Finder"
     TOOLS = [
-        FacialFind(),
-        FindUser(),
         Sherlock(),
         SocialScan()
     ]

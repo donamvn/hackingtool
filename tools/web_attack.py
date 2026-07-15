@@ -59,19 +59,6 @@ class CheckURL(HackingTool):
     PROJECT_URL = "https://github.com/UndeadSec/checkURL"
 
 
-class Blazy(HackingTool):
-    TITLE = "Blazy(Also Find ClickJacking)"
-    DESCRIPTION = "Blazy is a modern login page bruteforcer"
-    INSTALL_COMMANDS = []
-    RUN_COMMANDS = []
-    PROJECT_URL = "https://github.com/UltimateHackers/Blazy"
-    ARCHIVED = True
-    ARCHIVED_REASON = "Python 2 only (pip2.7/python2.7). Repo archived/unmaintained."
-
-    def __init__(self):
-        super().__init__(installable=False, runnable=False)
-
-
 class SubDomainTakeOver(HackingTool):
     TITLE = "Sub-Domain TakeOver"
     DESCRIPTION = (
@@ -254,6 +241,23 @@ class Mitmproxy(HackingTool):
     PROJECT_URL = "https://github.com/mitmproxy/mitmproxy"
 
 
+class Corsy(HackingTool):
+    TITLE = "Corsy (CORS Misconfiguration Scanner)"
+    DESCRIPTION = "Scan for CORS misconfigurations that allow cross-origin data theft."
+    INSTALL_COMMANDS = [
+        "git clone https://github.com/s0md3v/Corsy.git",
+        "cd Corsy && pip install --user -r requirements.txt",
+    ]
+    PROJECT_URL = "https://github.com/s0md3v/Corsy"
+
+
+class CRLFuzz(HackingTool):
+    TITLE = "CRLFuzz (CRLF Injection Scanner)"
+    DESCRIPTION = "Fast tool to scan CRLF vulnerability in web applications."
+    INSTALL_COMMANDS = ["go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest"]
+    PROJECT_URL = "https://github.com/dwisiswant0/crlfuzz"
+
+
 class WebAttackTools(HackingToolsCollection):
     TITLE = "Web Attack tools"
     DESCRIPTION = ""
@@ -262,7 +266,6 @@ class WebAttackTools(HackingToolsCollection):
         Skipfish(),
         SubDomainFinder(),
         CheckURL(),
-        Blazy(),
         SubDomainTakeOver(),
         Dirb(),
         Nuclei(),
@@ -278,6 +281,8 @@ class WebAttackTools(HackingToolsCollection):
         Arjun(),
         Caido(),
         Mitmproxy(),
+        Corsy(),
+        CRLFuzz(),
     ]
 
 if __name__ == "__main__":

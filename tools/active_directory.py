@@ -1,5 +1,9 @@
+import subprocess
+
 from core import HackingTool
 from core import HackingToolsCollection
+
+from rich.prompt import Prompt
 
 
 class BloodHound(HackingTool):
@@ -62,6 +66,17 @@ class Kerbrute(HackingTool):
     SUPPORTED_OS = ["linux", "macos"]
 
 
+class Coercer(HackingTool):
+    TITLE = "Coercer (Windows Coerce Attacks)"
+    DESCRIPTION = "Automatically find and exploit Windows coerce authentication vulnerabilities (PetitPotam, PrinterBug, etc)."
+    INSTALL_COMMANDS = ["pip install --user coercer"]
+    PROJECT_URL = "https://github.com/p0dalirius/Coercer"
+
+    def run(self):
+        target = Prompt.ask("Enter target IP/hostname")
+        subprocess.run(["coercer", "scan", "-t", target])
+
+
 class ActiveDirectoryTools(HackingToolsCollection):
     TITLE = "Active Directory Tools"
     DESCRIPTION = "Tools for AD enumeration, attack path discovery, and credential attacks."
@@ -72,4 +87,5 @@ class ActiveDirectoryTools(HackingToolsCollection):
         Responder(),
         Certipy(),
         Kerbrute(),
+        Coercer(),
     ]

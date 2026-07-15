@@ -38,31 +38,6 @@ class TheFatRat(HackingTool):
         subprocess.run(["./chk_tools"], cwd=cwd)
 
 
-class Brutal(HackingTool):
-    TITLE = "Brutal"
-    SUPPORTED_OS = ["linux"]
-    DESCRIPTION = (
-        "Brutal is a toolkit to quickly create various payloads, powershell attacks, "
-        "virus attacks and launch listener for a Human Interface Device."
-    )
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/Screetsec/Brutal.git",
-        "cd Brutal && chmod +x Brutal.sh",
-    ]
-    RUN_COMMANDS = ["cd Brutal && sudo bash Brutal.sh"]
-    PROJECT_URL = "https://github.com/Screetsec/Brutal"
-
-    def show_info(self):
-        super().show_info()
-        console.print(
-            "[bold cyan]Requirements:[/bold cyan]\n"
-            "  - Arduino Software (v1.6.7+)\n"
-            "  - TeensyDuino\n"
-            "  - Linux udev rules\n"
-            "  See: https://github.com/Screetsec/Brutal/wiki/Install-Requirements"
-        )
-
-
 class Stitch(HackingTool):
     TITLE = "Stitch"
     SUPPORTED_OS = ["linux"]
@@ -106,17 +81,6 @@ class Venom(HackingTool):
     PROJECT_URL = "https://github.com/r00t-3xp10it/venom"
 
 
-class Spycam(HackingTool):
-    TITLE = "Spycam"
-    DESCRIPTION = "Generates a Win32 payload that captures webcam images every 1 minute."
-    INSTALL_COMMANDS = [
-        "git clone https://github.com/indexnotfound404/spycam.git",
-        "cd spycam && bash install.sh && chmod +x spycam",
-    ]
-    RUN_COMMANDS = ["cd spycam && ./spycam"]
-    PROJECT_URL = "https://github.com/indexnotfound404/spycam"
-
-
 class MobDroid(HackingTool):
     TITLE = "Mob-Droid"
     SUPPORTED_OS = ["linux"]
@@ -126,28 +90,16 @@ class MobDroid(HackingTool):
     PROJECT_URL = "https://github.com/kinghacker0/Mob-Droid"
 
 
-class Enigma(HackingTool):
-    TITLE = "Enigma"
-    SUPPORTED_OS = ["linux"]
-    DESCRIPTION = "Enigma is a Multiplatform payload dropper."
-    INSTALL_COMMANDS = ["git clone https://github.com/UndeadSec/Enigma.git"]
-    RUN_COMMANDS = ["cd Enigma && sudo python3 enigma.py"]
-    PROJECT_URL = "https://github.com/UndeadSec/Enigma"
-
-
 class PayloadCreatorTools(HackingToolsCollection):
     TITLE = "Payload creation tools"
     # Bug 11 fix: show_options() override was missing `parent` parameter entirely —
     # the whole override is now deleted and the base class method is used instead.
     TOOLS = [
         TheFatRat(),
-        Brutal(),
         Stitch(),
         MSFVenom(),
         Venom(),
-        Spycam(),
         MobDroid(),
-        Enigma(),
     ]
 
 
