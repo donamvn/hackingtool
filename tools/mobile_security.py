@@ -14,8 +14,6 @@ class MobSF(HackingTool):
     RUN_COMMANDS = ["cd Mobile-Security-Framework-MobSF && ./run.sh"]
     PROJECT_URL = "https://github.com/MobSF/Mobile-Security-Framework-MobSF"
     SUPPORTED_OS = ["linux", "macos"]
-    TAGS = ["mobile", "android", "scanner"]
-    LAST_VERIFIED = "2026-07-15"
 
 
 class Frida(HackingTool):
@@ -27,8 +25,6 @@ class Frida(HackingTool):
     RUN_COMMANDS = ["frida --help"]
     PROJECT_URL = "https://github.com/frida/frida"
     SUPPORTED_OS = ["linux", "macos"]
-    TAGS = ["mobile", "android", "re", "reverse"]
-    LAST_VERIFIED = "2026-07-15"
 
 
 class Objection(HackingTool):
@@ -40,8 +36,6 @@ class Objection(HackingTool):
     RUN_COMMANDS = ["objection --help"]
     PROJECT_URL = "https://github.com/sensepost/objection"
     SUPPORTED_OS = ["linux", "macos"]
-    TAGS = ["mobile", "android", "exploit"]
-    LAST_VERIFIED = "2026-07-15"
 
 
 class MobileSecurityTools(HackingToolsCollection):

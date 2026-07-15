@@ -25,6 +25,7 @@ class Wireshark(HackingTool):
     TITLE = "Wireshark"
     TAGS = ["forensic", "network", "scanner"]
     LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "winget install WiresharkFoundation.Wireshark"
     DESCRIPTION = "Wireshark is a network capture and analyzer \n" \
                   "tool to see what’s happening in your network.\n " \
                   "And also investigate Network related incident"
@@ -133,6 +134,7 @@ class Binwalk(HackingTool):
     SUPPORTED_OS = ["linux", "macos", "windows"]
     TAGS = ["forensic", "reverse", "re"]
     LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "pip install binwalk"
     DESCRIPTION = (
         "Analyze, reverse engineer, and extract firmware images.\n"
         "Usage: binwalk -e firmware.bin"

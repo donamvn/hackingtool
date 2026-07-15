@@ -65,6 +65,7 @@ class Ghidra(HackingTool):
     DESCRIPTION = "NSA's software reverse engineering framework — disassembly, decompilation, scripting."
     TAGS = ["re", "reverse"]
     LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "Download from https://ghidra-sre.org/"
     REQUIRES_JAVA = True
     INSTALL_COMMANDS = [
         "sudo apt-get install -y ghidra || echo 'Download from https://ghidra-sre.org/'",
@@ -79,6 +80,7 @@ class Radare2(HackingTool):
     DESCRIPTION = "Portable UNIX-like reverse engineering framework and command-line toolset."
     TAGS = ["re", "reverse"]
     LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "choco install radare2"
     INSTALL_COMMANDS = [
         "git clone https://github.com/radareorg/radare2.git",
         "cd radare2 && sys/install.sh",

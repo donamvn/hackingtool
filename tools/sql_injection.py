@@ -90,6 +90,8 @@ class Blisqy(HackingTool):
 class Leviathan(HackingTool):
     TITLE = "Leviathan - Wide Range Mass Audit Toolkit"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Leviathan is a mass audit toolkit with service discovery, brute force, SQL injection detection, and custom exploit capabilities. Requires API keys."
     TAGS = ["sqli", "scanner", "recon"]
     LAST_VERIFIED = "2026-07-15"
@@ -102,6 +104,8 @@ class Leviathan(HackingTool):
 class SQLScan(HackingTool):
     TITLE = "SQLScan"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "SQLScan is a quick web scanner to find SQL injection points. Not for educational purposes."
     TAGS = ["sqli", "web", "scanner"]
     LAST_VERIFIED = "2026-07-15"
