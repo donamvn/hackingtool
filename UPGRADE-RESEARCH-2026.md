@@ -171,13 +171,17 @@
 - [x] Update constants.py: repo owner → donamvn, version → 2.1.0
 - [x] Rewrite README: badges, What's New v2.1.0, correct tool count
 
-### Batch 4 (Future — next session)
-- [ ] Add TAGS field to HackingTool base class
-- [ ] Add LAST_VERIFIED date field
-- [ ] Add Windows install alternatives (winget/scoop/choco)
+### Batch 4 — DONE 2026-07-15
+- [x] Add TAGS field to all 171 tool classes (2-4 tags each)
+- [x] Add LAST_VERIFIED = "2026-07-15" to all tool classes
+- [x] Add WIN_INSTALL_HINT for Windows-compatible tools (Nmap, Sqlmap, ZAP, Trivy, Ghidra, etc)
+- [x] Add LAST_VERIFIED to HackingTool base class in core.py
+- [x] Integrate tool catalog into reverse-skill as pentest-tools reference
+
+### Batch 5 (Future)
 - [ ] Add Docker support for more tools
 - [ ] CI: auto-check repo URLs monthly
-- [ ] Integrate tool catalog into reverse-skill as reference
+- [ ] Auto-generate README tool table from Python classes
 
 ---
 

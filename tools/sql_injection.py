@@ -7,6 +7,9 @@ from rich.prompt import Prompt
 class Sqlmap(HackingTool):
     TITLE = "Sqlmap tool"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "pip install sqlmap"
     DESCRIPTION = "sqlmap is an open source penetration testing tool that " \
                   "automates the process of detecting and exploiting SQL injection flaws " \
                   "and taking over database servers. [!] python3 sqlmap.py -u [http://example.com] --batch --banner. More usage: https://github.com/sqlmapproject/sqlmap/wiki/Usage"
@@ -21,6 +24,8 @@ class Sqlmap(HackingTool):
 class NoSqlMap(HackingTool):
     TITLE = "NoSqlMap"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "NoSQLMap is an open source Python tool designed to audit and automate injection attacks. [*] Please install MongoDB."
     TAGS = ["sqli", "web", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -37,6 +42,8 @@ class NoSqlMap(HackingTool):
 class SQLiScanner(HackingTool):
     TITLE = "Damn Small SQLi Scanner"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "DSSS is a fully functional SQL injection vulnerability scanner also supporting GET and POST parameters. Usage: python3 dsss.py -h | -u [URL]"
     TAGS = ["sqli", "web", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -50,6 +57,8 @@ class SQLiScanner(HackingTool):
 class Explo(HackingTool):
     TITLE = "Explo"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["sqli", "web", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Explo is a simple tool to describe web security issues in human and machine readable format. Usage: explo [--verbose|-v] testcase.yaml | explo [--verbose|-v] examples/*.yaml"
     TAGS = ["web", "exploit", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -66,6 +75,8 @@ class Explo(HackingTool):
 class Blisqy(HackingTool):
     TITLE = "Blisqy - Exploit Time-based blind-SQL injection"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["sqli", "web", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Blisqy helps web security researchers find time-based blind SQL injections on HTTP headers and exploit them."
     TAGS = ["sqli", "web", "exploit"]
     LAST_VERIFIED = "2026-07-15"

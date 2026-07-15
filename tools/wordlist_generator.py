@@ -114,6 +114,7 @@ class Hashcat(HackingTool):
     SUPPORTED_OS = ["linux"]
     TAGS = ["password", "cracking"]
     LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "choco install hashcat"
     INSTALL_COMMANDS = ["sudo apt-get install -y hashcat"]
     RUN_COMMANDS = ["hashcat --help"]
     PROJECT_URL = "https://github.com/hashcat/hashcat"
@@ -128,6 +129,7 @@ class JohnTheRipper(HackingTool):
     SUPPORTED_OS = ["linux"]
     TAGS = ["password", "cracking"]
     LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "choco install john"
     INSTALL_COMMANDS = ["sudo apt-get install -y john"]
     RUN_COMMANDS = ["john --help"]
     PROJECT_URL = "https://github.com/openwall/john"

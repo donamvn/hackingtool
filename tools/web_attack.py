@@ -104,6 +104,8 @@ class SubDomainTakeOver(HackingTool):
 class Dirb(HackingTool):
     TITLE = "Dirb"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "DIRB is a Web Content Scanner. It looks for existing "
         "(and/or hidden) Web Objects.\n"
@@ -126,6 +128,8 @@ class Dirb(HackingTool):
 class Nuclei(HackingTool):
     TITLE = "Nuclei (Vulnerability Scanner)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "scanner", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Fast, template-based vulnerability scanner used by 50k+ security teams.\n"
         "Usage: nuclei -u https://example.com"
@@ -144,6 +148,8 @@ class Nuclei(HackingTool):
 class Ffuf(HackingTool):
     TITLE = "ffuf (Web Fuzzer)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Fast web fuzzer — content discovery, parameter fuzzing, vhost discovery.\n"
         "Usage: ffuf -w wordlist.txt -u https://example.com/FUZZ"
@@ -160,6 +166,8 @@ class Ffuf(HackingTool):
 
 class Feroxbuster(HackingTool):
     TITLE = "Feroxbuster (Directory Brute Force)"
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Fast, recursive content discovery tool written in Rust.\n"
         "Usage: feroxbuster -u https://example.com -w wordlist.txt"
@@ -177,6 +185,9 @@ class Feroxbuster(HackingTool):
 
 class Nikto(HackingTool):
     TITLE = "Nikto (Web Server Scanner)"
+    TAGS = ["web", "scanner", "webapp"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "Works via WSL or Docker"
     DESCRIPTION = (
         "Scan web servers for dangerous files, outdated software, misconfigurations.\n"
         "Usage: nikto -h https://example.com"
@@ -192,6 +203,8 @@ class Nikto(HackingTool):
 class Wafw00f(HackingTool):
     TITLE = "wafw00f (WAF Detector)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["web", "scanner", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Fingerprint and identify Web Application Firewalls (WAF).\n"
         "Usage: wafw00f https://example.com"
@@ -209,6 +222,8 @@ class Wafw00f(HackingTool):
 class Katana(HackingTool):
     TITLE = "Katana (Web Crawler)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "recon", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Next-generation crawling and spidering framework from ProjectDiscovery.\n"
         "Usage: katana -u https://example.com"
@@ -226,6 +241,8 @@ class Katana(HackingTool):
 class Gobuster(HackingTool):
     TITLE = "Gobuster (Dir/DNS/Vhost Brute Force)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Directory/file, DNS, and vhost brute-forcing tool written in Go."
     TAGS = ["web", "scanner", "recon"]
     LAST_VERIFIED = "2026-07-15"
@@ -238,6 +255,8 @@ class Gobuster(HackingTool):
 class Dirsearch(HackingTool):
     TITLE = "Dirsearch (Web Path Discovery)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Web path brute-forcing tool for discovering directories and files on web servers."
     TAGS = ["web", "scanner", "recon"]
     LAST_VERIFIED = "2026-07-15"
@@ -248,6 +267,9 @@ class Dirsearch(HackingTool):
 
 class OwaspZap(HackingTool):
     TITLE = "OWASP ZAP (Web App Scanner)"
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "winget install ZAP.ZAP"
     DESCRIPTION = "Full-featured web application security scanner — proxy, spider, fuzzer, scanner."
     TAGS = ["web", "webapp", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -261,6 +283,8 @@ class OwaspZap(HackingTool):
 class TestSSL(HackingTool):
     TITLE = "testssl.sh (TLS/SSL Checker)"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Check TLS/SSL ciphers, protocols, and cryptographic flaws on any port."
     TAGS = ["web", "scanner", "network"]
     LAST_VERIFIED = "2026-07-15"
@@ -272,6 +296,8 @@ class TestSSL(HackingTool):
 class Arjun(HackingTool):
     TITLE = "Arjun (HTTP Parameter Discovery)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "webapp", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "HTTP parameter discovery suite that finds hidden GET/POST parameters."
     TAGS = ["web", "recon", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -282,6 +308,8 @@ class Arjun(HackingTool):
 
 class Caido(HackingTool):
     TITLE = "Caido (Web Security Auditing)"
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Lightweight, modern web security auditing toolkit — Burp Suite alternative written in Rust."
     TAGS = ["web", "webapp", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -296,6 +324,9 @@ class Caido(HackingTool):
 class Mitmproxy(HackingTool):
     TITLE = "mitmproxy (Intercepting Proxy)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "webapp", "network"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "pip install mitmproxy"
     DESCRIPTION = "Interactive TLS-capable intercepting HTTP proxy for pentesters and developers."
     TAGS = ["web", "network", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -308,6 +339,8 @@ class Mitmproxy(HackingTool):
 class Corsy(HackingTool):
     TITLE = "Corsy (CORS Misconfiguration Scanner)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Scan for CORS misconfigurations that allow cross-origin data theft."
     TAGS = ["web", "webapp", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -321,6 +354,8 @@ class Corsy(HackingTool):
 class CRLFuzz(HackingTool):
     TITLE = "CRLFuzz (CRLF Injection Scanner)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Fast tool to scan CRLF vulnerability in web applications."
     TAGS = ["web", "webapp", "scanner"]
     LAST_VERIFIED = "2026-07-15"
@@ -331,6 +366,8 @@ class CRLFuzz(HackingTool):
 class LinkFinder(HackingTool):
     TITLE = "LinkFinder (JS Endpoint Discovery)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["web", "recon", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Discover endpoints and API paths hidden inside JavaScript files."
     TAGS = ["web", "recon", "osint"]
     LAST_VERIFIED = "2026-07-15"
@@ -348,6 +385,8 @@ class LinkFinder(HackingTool):
 class WhatWaf(HackingTool):
     TITLE = "WhatWaf (WAF Detection & Bypass)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["web", "webapp", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Detect and attempt to bypass web application firewalls and protection systems."
     TAGS = ["web", "webapp", "recon"]
     LAST_VERIFIED = "2026-07-15"

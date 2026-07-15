@@ -5,6 +5,8 @@ from core import HackingToolsCollection
 class MobSF(HackingTool):
     TITLE = "MobSF (Mobile Security Framework)"
     DESCRIPTION = "All-in-one mobile app pentesting, malware analysis, and security assessment."
+    TAGS = ["mobile", "android", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git",
         "cd Mobile-Security-Framework-MobSF && ./setup.sh",
@@ -19,6 +21,8 @@ class MobSF(HackingTool):
 class Frida(HackingTool):
     TITLE = "Frida (Dynamic Instrumentation)"
     DESCRIPTION = "Dynamic instrumentation toolkit for runtime hooking on Android, iOS, Windows, macOS, Linux."
+    TAGS = ["mobile", "android", "reverse"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip install --user frida-tools"]
     RUN_COMMANDS = ["frida --help"]
     PROJECT_URL = "https://github.com/frida/frida"
@@ -30,6 +34,8 @@ class Frida(HackingTool):
 class Objection(HackingTool):
     TITLE = "Objection (Mobile Runtime Exploration)"
     DESCRIPTION = "Runtime mobile exploration toolkit powered by Frida — no jailbreak/root required."
+    TAGS = ["mobile", "android", "reverse"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip install --user objection"]
     RUN_COMMANDS = ["objection --help"]
     PROJECT_URL = "https://github.com/sensepost/objection"

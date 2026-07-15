@@ -257,7 +257,11 @@ class Dnstwist(HackingTool):
     # They are now the correct uppercase names the base class reads.
     TITLE = "dnstwist"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["phishing", "recon", "osint"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Domain name permutation engine for detecting typosquatting, phishing and brand impersonation"
+    TAGS = ["phishing", "recon", "osint"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip3 install --user dnstwist"]
     RUN_COMMANDS = ["dnstwist --help"]
     PROJECT_URL = "https://github.com/elceef/dnstwist"
