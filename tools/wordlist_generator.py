@@ -14,6 +14,8 @@ class Cupp(HackingTool):
     SUPPORTED_OS = ["linux"]
     # Bug 24 fix: DESCRIPTION was copy-pasted from WlCreator — completely wrong
     DESCRIPTION = "Common User Passwords Profiler — generates personalized wordlists based on target info."
+    TAGS = ["wordlist", "password", "osint"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/Mebus/cupp.git"]
     RUN_COMMANDS = ["cd cupp && python3 cupp.py -i"]
     PROJECT_URL = "https://github.com/Mebus/cupp"
@@ -35,6 +37,8 @@ class WlCreator(HackingTool):
     DESCRIPTION = "WlCreator is a C program that can create all possibilities" \
                   " of passwords,\n and you can choose Length, Lowercase, " \
                   "Capital, Numbers and Special Chars"
+    TAGS = ["wordlist", "password"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/Z4nzu/wlcreator.git"]
     RUN_COMMANDS = [
         "cd wlcreator && sudo gcc -o wlcreator wlcreator.c && ./wlcreator 5"]
@@ -55,6 +59,8 @@ class GoblinWordGenerator(HackingTool):
     TITLE = "Goblin WordGenerator"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Goblin WordGenerator"
+    TAGS = ["wordlist", "password"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/GoblinWordGenerator.git"]
     RUN_COMMANDS = ["cd GoblinWordGenerator && python3 goblin.py"]
@@ -79,6 +85,8 @@ class showme(HackingTool):
                   "1.4 Billion clear text credentials which was dumped as " \
                   "part of BreachCompilation leak. This database makes " \
                   "finding passwords faster and easier than ever before."
+    TAGS = ["wordlist", "password", "osint"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Viralmaniar/SMWYG-Show-Me-What-You-Got.git",
         "cd SMWYG-Show-Me-What-You-Got && pip install --user -r requirements.txt"
@@ -104,6 +112,8 @@ class Hashcat(HackingTool):
         "Usage: hashcat -m 0 -a 0 hashes.txt wordlist.txt"
     )
     SUPPORTED_OS = ["linux"]
+    TAGS = ["password", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["sudo apt-get install -y hashcat"]
     RUN_COMMANDS = ["hashcat --help"]
     PROJECT_URL = "https://github.com/hashcat/hashcat"
@@ -116,6 +126,8 @@ class JohnTheRipper(HackingTool):
         "Usage: john --wordlist=wordlist.txt hashfile"
     )
     SUPPORTED_OS = ["linux"]
+    TAGS = ["password", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["sudo apt-get install -y john"]
     RUN_COMMANDS = ["john --help"]
     PROJECT_URL = "https://github.com/openwall/john"
@@ -128,6 +140,8 @@ class Haiti(HackingTool):
         "Identify hash types — supports 300+ algorithms.\n"
         "Usage: haiti <hash>"
     )
+    TAGS = ["password", "cracking", "forensic"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_RUBY = True
     INSTALL_COMMANDS = ["gem install haiti-hash"]
     RUN_COMMANDS = ["haiti --help"]

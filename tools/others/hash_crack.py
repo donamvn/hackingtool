@@ -8,6 +8,8 @@ from rich import box
 class HashBuster(HackingTool):
     TITLE = "Hash Buster"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["password", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Features: \n " \
                   "Automatic hash type identification \n " \
                   "Supports MD5, SHA1, SHA256, SHA384, SHA512"

@@ -10,6 +10,9 @@ class Sqlmap(HackingTool):
     DESCRIPTION = "sqlmap is an open source penetration testing tool that " \
                   "automates the process of detecting and exploiting SQL injection flaws " \
                   "and taking over database servers. [!] python3 sqlmap.py -u [http://example.com] --batch --banner. More usage: https://github.com/sqlmapproject/sqlmap/wiki/Usage"
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "pip install sqlmap"
     INSTALL_COMMANDS = ["git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev"]
     RUN_COMMANDS = ["cd sqlmap-dev;python3 sqlmap.py --wizard"]
     PROJECT_URL = "https://github.com/sqlmapproject/sqlmap"
@@ -19,6 +22,8 @@ class NoSqlMap(HackingTool):
     TITLE = "NoSqlMap"
     SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = "NoSQLMap is an open source Python tool designed to audit and automate injection attacks. [*] Please install MongoDB."
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/codingo/NoSQLMap.git",
         # Bug 25 fix: was "python setup.py install" (Python 2) and "python NoSQLMap"
@@ -33,6 +38,8 @@ class SQLiScanner(HackingTool):
     TITLE = "Damn Small SQLi Scanner"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "DSSS is a fully functional SQL injection vulnerability scanner also supporting GET and POST parameters. Usage: python3 dsss.py -h | -u [URL]"
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/stamparm/DSSS.git"]
     PROJECT_URL = "https://github.com/stamparm/DSSS"
 
@@ -44,6 +51,8 @@ class Explo(HackingTool):
     TITLE = "Explo"
     SUPPORTED_OS = ["linux", "macos"]
     DESCRIPTION = "Explo is a simple tool to describe web security issues in human and machine readable format. Usage: explo [--verbose|-v] testcase.yaml | explo [--verbose|-v] examples/*.yaml"
+    TAGS = ["web", "exploit", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/dtag-dev-sec/explo.git",
         "cd explo && pip install --user .",
@@ -58,6 +67,8 @@ class Blisqy(HackingTool):
     TITLE = "Blisqy - Exploit Time-based blind-SQL injection"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Blisqy helps web security researchers find time-based blind SQL injections on HTTP headers and exploit them."
+    TAGS = ["sqli", "web", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/JohnTroony/Blisqy.git"]
     PROJECT_URL = "https://github.com/JohnTroony/Blisqy"
 
@@ -69,6 +80,8 @@ class Leviathan(HackingTool):
     TITLE = "Leviathan - Wide Range Mass Audit Toolkit"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Leviathan is a mass audit toolkit with service discovery, brute force, SQL injection detection, and custom exploit capabilities. Requires API keys."
+    TAGS = ["sqli", "scanner", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/leviathan-framework/leviathan.git",
                         "cd leviathan;pip install --user -r requirements.txt"]
     RUN_COMMANDS = ["cd leviathan;python leviathan.py"]
@@ -79,6 +92,8 @@ class SQLScan(HackingTool):
     TITLE = "SQLScan"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "SQLScan is a quick web scanner to find SQL injection points. Not for educational purposes."
+    TAGS = ["sqli", "web", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["sudo apt install php php-bz2 php-curl php-mbstring curl",
                         "sudo curl https://raw.githubusercontent.com/Cvar1984/sqlscan/dev/build/main.phar --output /usr/local/bin/sqlscan",
                         "chmod +x /usr/local/bin/sqlscan"]

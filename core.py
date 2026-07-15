@@ -97,6 +97,9 @@ class HackingTool:
     # Tags for search/filter (e.g. ["osint", "web", "recon", "scanner"])
     TAGS: list[str]         = []
 
+    # Last verified date (YYYY-MM-DD) — when this tool's URL/install was confirmed working
+    LAST_VERIFIED: str      = ""
+
     # Archived tool flags
     ARCHIVED: bool          = False
     ARCHIVED_REASON: str    = ""

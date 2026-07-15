@@ -14,6 +14,8 @@ class TerminalMultiplexer(HackingTool):
     # Bug 19 fix: tilix is a Debian/Ubuntu package only — mark Linux-only
     INSTALL_COMMANDS = ["sudo apt-get install -y tilix"]
     SUPPORTED_OS = ["linux"]
+    TAGS = ["network"]
+    LAST_VERIFIED = "2026-07-15"
 
     def __init__(self):
         # Py3-4 fix: super(TerminalMultiplexer, self) → super()
@@ -23,6 +25,8 @@ class TerminalMultiplexer(HackingTool):
 class Crivo(HackingTool):
     TITLE = "Crivo"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["network", "recon", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "A tool for extracting and filtering URLs, IPs, domains, and subdomains\n"
         "from web pages or text, with built-in web scraping capabilities.\n"

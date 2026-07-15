@@ -9,6 +9,8 @@ from rich.prompt import Prompt
 
 class Autopsy(HackingTool):
     TITLE = "Autopsy"
+    TAGS = ["forensic", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Autopsy is a platform that is used by Cyber Investigators.\n" \
                   "[!] Works in any OS\n" \
                   "[!] Recover Deleted Files from any OS & Media \n" \
@@ -21,6 +23,8 @@ class Autopsy(HackingTool):
 
 class Wireshark(HackingTool):
     TITLE = "Wireshark"
+    TAGS = ["forensic", "network", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Wireshark is a network capture and analyzer \n" \
                   "tool to see what’s happening in your network.\n " \
                   "And also investigate Network related incident"
@@ -35,6 +39,8 @@ class BulkExtractor(HackingTool):
     DESCRIPTION = "Extract useful information without parsing the file system"
     PROJECT_URL = "https://github.com/simsong/bulk_extractor"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["forensic", "recon"]
+    LAST_VERIFIED = "2026-07-15"
 
     def __init__(self):
         super().__init__([
@@ -69,6 +75,8 @@ class Guymager(HackingTool):
     TITLE = "Disk Clone and ISO Image Acquire"
     DESCRIPTION = "Guymager is a free forensic imager for media acquisition."
     SUPPORTED_OS = ["linux"]
+    TAGS = ["forensic"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["sudo apt install guymager"]
     RUN_COMMANDS = ["sudo guymager"]
     PROJECT_URL = "https://guymager.sourceforge.io/"
@@ -77,6 +85,8 @@ class Guymager(HackingTool):
 
 class Toolsley(HackingTool):
     TITLE = "Toolsley"
+    TAGS = ["forensic", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Toolsley got more than ten useful tools for investigation.\n" \
                   "[+]File signature verifier\n" \
                   "[+]File identifier \n" \
@@ -94,6 +104,8 @@ class Toolsley(HackingTool):
 class Volatility3(HackingTool):
     TITLE = "Volatility 3 (Memory Forensics)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["forensic", "reverse"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "The world's most widely used memory forensics framework.\n"
         "Usage: python3 vol.py -f memory.dmp windows.pslist"
@@ -119,6 +131,8 @@ class Volatility3(HackingTool):
 class Binwalk(HackingTool):
     TITLE = "Binwalk (Firmware Analysis)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["forensic", "reverse", "re"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Analyze, reverse engineer, and extract firmware images.\n"
         "Usage: binwalk -e firmware.bin"
@@ -138,6 +152,8 @@ class Pspy(HackingTool):
     RUN_COMMANDS = ["./pspy --help"]
     PROJECT_URL = "https://github.com/DominicBreuker/pspy"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["forensic", "post-exploit", "recon"]
+    LAST_VERIFIED = "2026-07-15"
 
 
 class ForensicTools(HackingToolsCollection):

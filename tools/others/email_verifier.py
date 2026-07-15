@@ -7,6 +7,8 @@ from rich.prompt import Prompt
 class KnockMail(HackingTool):
     TITLE = "Knockmail"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["osint", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "KnockMail Tool Verify If Email Exists"
     INSTALL_COMMANDS = [
         "git clone https://github.com/heywoodlh/KnockMail.git",

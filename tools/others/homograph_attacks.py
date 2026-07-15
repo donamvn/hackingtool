@@ -8,6 +8,8 @@ from rich import box
 class EvilURL(HackingTool):
     TITLE = "EvilURL"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["phishing", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Generate unicode evil domains for IDN Homograph Attack " \
                   "and detect them."
     INSTALL_COMMANDS = ["git clone https://github.com/UndeadSec/EvilURL.git"]

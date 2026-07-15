@@ -10,6 +10,8 @@ from rich.prompt import Prompt
 class SteganoHide(HackingTool):
     TITLE = "SteganoHide"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["steganography", "privacy"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["sudo apt-get install steghide -y"]
 
     def run(self):
@@ -41,6 +43,8 @@ class StegnoCracker(HackingTool):
     TITLE = "StegnoCracker"
     SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "SteganoCracker uncovers hidden data inside files using brute-force utility"
+    TAGS = ["steganography", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip install --user stegcracker && pip install --user stegcracker -U --force-reinstall"]
 
     def run(self):
@@ -53,6 +57,8 @@ class StegoCracker(HackingTool):
     TITLE = "StegoCracker"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "StegoCracker lets you hide and retrieve data in image or audio files"
+    TAGS = ["steganography", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/W1LDN16H7/StegoCracker.git",
         "sudo chmod -R 755 StegoCracker"
@@ -68,6 +74,8 @@ class Whitespace(HackingTool):
     TITLE = "Whitespace"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Use whitespace and unicode characters for steganography"
+    TAGS = ["steganography", "privacy"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/beardog108/snow10.git",
         "sudo chmod -R 755 snow10"

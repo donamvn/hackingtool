@@ -8,6 +8,8 @@ from rich import box
 class DebInject(HackingTool):
     TITLE = "Debinject"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["payload", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Debinject is a tool that inject malicious code into *.debs"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/Debinject.git"]
@@ -18,6 +20,8 @@ class DebInject(HackingTool):
 class Pixload(HackingTool):
     TITLE = "Pixload"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["payload", "steganography"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Pixload -- Image Payload Creating tools \n " \
                   "Pixload is Set of tools for creating/injecting payload into images."
     INSTALL_COMMANDS = [

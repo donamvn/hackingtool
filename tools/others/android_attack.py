@@ -11,6 +11,8 @@ class Keydroid(HackingTool):
                   "[!] You have to install Some Manually Refer Below Link:\n " \
                   "[+] https://github.com/F4dl0/keydroid"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["mobile", "android", "remote"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/F4dl0/keydroid.git"]
     RUN_COMMANDS = ["cd keydroid && bash keydroid.sh"]
     PROJECT_URL = "https://github.com/F4dl0/keydroid"
@@ -22,6 +24,8 @@ class MySMS(HackingTool):
                   "[!] You have to install Some Manually Refer Below Link:\n\t " \
                   "[+] https://github.com/papusingh2sms/mysms"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["mobile", "android", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/papusingh2sms/mysms.git"]
     RUN_COMMANDS = ["cd mysms && bash mysms.sh"]
@@ -34,6 +38,8 @@ class LockPhish(HackingTool):
                   "lock screen, designed to\n Grab Windows credentials,Android" \
                   " PIN and iPhone Passcode using a https link."
     SUPPORTED_OS = ["linux"]
+    TAGS = ["mobile", "android", "phishing"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/JasonJerry/lockphish.git"]
     RUN_COMMANDS = ["cd lockphish && bash lockphish.sh"]
@@ -44,6 +50,8 @@ class Droidcam(HackingTool):
     TITLE = "DroidCam (Capture Image)"
     DESCRIPTION = "Powerful Tool For Grab Front Camera Snap Using A Link"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["mobile", "android", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         # Bug 16 fix: missing comma caused two strings to be implicitly concatenated into one
         "git clone https://github.com/kinghacker0/WishFish.git",
@@ -58,6 +66,8 @@ class EvilApp(HackingTool):
     DESCRIPTION = "EvilApp is a script to generate Android App that can " \
                   "hijack authenticated sessions in cookies."
     SUPPORTED_OS = ["linux"]
+    TAGS = ["mobile", "android", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/crypticterminal/EvilApp.git"]
     RUN_COMMANDS = ["cd EvilApp && bash evilapp.sh"]

@@ -20,6 +20,8 @@ from rich.prompt import Prompt
 class HatCloud(HackingTool):
     TITLE = "HatCloud(Bypass CloudFlare for IP)"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["web", "network", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "HatCloud build in Ruby. It makes bypass in CloudFlare for " \
                   "discover real IP."
     INSTALL_COMMANDS = ["git clone https://github.com/HatBashBR/HatCloud.git"]

@@ -18,6 +18,8 @@ class WIFIPumpkin(HackingTool):
     RUN_COMMANDS = ["sudo wifipumpkin3"]
     PROJECT_URL = "https://github.com/P0cL4bs/wifipumpkin3"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "phishing"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
 
 
@@ -36,6 +38,8 @@ class pixiewps(HackingTool):
     ]
     PROJECT_URL = "https://github.com/wiire/pixiewps"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
 
     def run(self):
@@ -62,6 +66,8 @@ class BluePot(HackingTool):
     RUN_COMMANDS = ["cd bluepot && sudo java -jar bluepot.jar"]
     PROJECT_URL = "https://github.com/andrewmichaelsmith/bluepot"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_JAVA = True
 
 
@@ -75,6 +81,8 @@ class Fluxion(HackingTool):
     RUN_COMMANDS = ["cd fluxion && sudo bash fluxion.sh -i"]
     PROJECT_URL = "https://github.com/FluxionNetwork/fluxion"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "phishing"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
 
 
@@ -92,6 +100,8 @@ class Wifiphisher(HackingTool):
     RUN_COMMANDS = ["cd wifiphisher && sudo wifiphisher"]
     PROJECT_URL = "https://github.com/wifiphisher/wifiphisher"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "phishing"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
 
 
@@ -105,6 +115,8 @@ class Wifite(HackingTool):
     RUN_COMMANDS = ["sudo wifite"]
     PROJECT_URL = "https://github.com/derv82/wifite2"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
 
 
@@ -123,6 +135,8 @@ class Howmanypeople(HackingTool):
     ]
     RUN_COMMANDS = ["howmanypeoplearearound"]
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
 
 
@@ -133,6 +147,8 @@ class Airgeddon(HackingTool):
         "Covers WPA/WPA2, WEP, WPS, PMKID, evil twin, handshake capture and more."
     )
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
     INSTALL_COMMANDS = [
         "git clone https://github.com/v1s1t0r1sh3r3/airgeddon.git",
@@ -148,6 +164,8 @@ class Hcxdumptool(HackingTool):
         "Usage: hcxdumptool -i <iface> -o capture.pcapng --enable_status=1"
     )
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_WIFI = True
     INSTALL_COMMANDS = [
         "git clone https://github.com/ZerBea/hcxdumptool.git",
@@ -164,6 +182,8 @@ class Hcxtools(HackingTool):
         "Usage: hcxpcapngtool -o hashes.txt capture.pcapng"
     )
     SUPPORTED_OS = ["linux"]
+    TAGS = ["wireless", "wifi", "cracking"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/ZerBea/hcxtools.git",
         "cd hcxtools && make && sudo make install",
@@ -175,6 +195,8 @@ class Hcxtools(HackingTool):
 class Bettercap(HackingTool):
     TITLE = "Bettercap (Network/WiFi/BLE MITM)"
     DESCRIPTION = "Swiss army knife for WiFi, BLE, HID, and Ethernet network recon and MITM attacks."
+    TAGS = ["wireless", "wifi", "network"]
+    LAST_VERIFIED = "2026-07-15"
     SUPPORTED_OS = ["linux"]
     INSTALL_COMMANDS = ["sudo apt-get install -y bettercap"]
     RUN_COMMANDS = ["sudo bettercap --help"]
@@ -185,6 +207,8 @@ class Esp8266Deauther(HackingTool):
     TITLE = "ESP8266 Deauther (Hardware WiFi Deauth)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Scan for WiFi devices, perform deauth attacks, create beacons — runs on ESP8266 hardware."
+    TAGS = ["wireless", "wifi", "dos"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/SpacehuhnTech/esp8266_deauther.git",
     ]

@@ -11,6 +11,8 @@ from rich import box
 class Sherlock(HackingTool):
     TITLE = "Sherlock"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["osint", "social", "recon"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Hunt down social media accounts by username across social networks \n " \
                   "For More Usage \n" \
                   "\t >>python3 sherlock --help"
@@ -34,6 +36,8 @@ class Sherlock(HackingTool):
 class SocialScan(HackingTool):
     TITLE = "SocialScan | Username or Email"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["osint", "social"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Check email address and username availability on online " \
                   "platforms with 100% accuracy"
     INSTALL_COMMANDS = ["pip install --user socialscan"]

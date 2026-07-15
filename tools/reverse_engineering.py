@@ -11,6 +11,8 @@ class AndroGuard(HackingTool):
     SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Androguard is a Reverse engineering, Malware and goodware " \
                   "analysis of Android applications and more"
+    TAGS = ["re", "reverse", "android", "mobile"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip install --user -U androguard"]
     PROJECT_URL = "https://github.com/androguard/androguard "
 
@@ -22,6 +24,8 @@ class Apk2Gold(HackingTool):
     TITLE = "Apk2Gold"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Apk2Gold is a CLI tool for decompiling Android apps to Java"
+    TAGS = ["re", "reverse", "android", "mobile"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/lxdvs/apk2gold.git",
         "cd apk2gold;sudo bash make.sh"
@@ -41,6 +45,8 @@ class Jadx(HackingTool):
                   " aar and zip files\n" \
                   "[*] decode AndroidManifest.xml and other resources from " \
                   "resources.arsc"
+    TAGS = ["re", "reverse", "android", "mobile"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/skylot/jadx.git",
         # Bug 30 fix: gradlew dist requires Java — check first
@@ -57,6 +63,8 @@ class Jadx(HackingTool):
 class Ghidra(HackingTool):
     TITLE = "Ghidra (NSA Reverse Engineering)"
     DESCRIPTION = "NSA's software reverse engineering framework — disassembly, decompilation, scripting."
+    TAGS = ["re", "reverse"]
+    LAST_VERIFIED = "2026-07-15"
     REQUIRES_JAVA = True
     INSTALL_COMMANDS = [
         "sudo apt-get install -y ghidra || echo 'Download from https://ghidra-sre.org/'",
@@ -69,6 +77,8 @@ class Ghidra(HackingTool):
 class Radare2(HackingTool):
     TITLE = "Radare2 (RE Framework)"
     DESCRIPTION = "Portable UNIX-like reverse engineering framework and command-line toolset."
+    TAGS = ["re", "reverse"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/radareorg/radare2.git",
         "cd radare2 && sys/install.sh",

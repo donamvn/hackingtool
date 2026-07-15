@@ -15,6 +15,9 @@ from rich.prompt import Prompt
 class NMAP(HackingTool):
     TITLE = "Network Map (nmap)"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "scanner", "network"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "winget install Insecure.Nmap"
     DESCRIPTION = "Free and open source utility for network discovery and security auditing"
     INSTALL_COMMANDS = [
         "git clone https://github.com/nmap/nmap.git",
@@ -29,6 +32,8 @@ class NMAP(HackingTool):
 class Dracnmap(HackingTool):
     TITLE = "Dracnmap"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "scanner", "network"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Dracnmap is an open source program which is using to \n" \
                   "exploit the network and gathering information with nmap help."
     INSTALL_COMMANDS = [
@@ -41,6 +46,8 @@ class Dracnmap(HackingTool):
 
 class PortScan(HackingTool):
     TITLE = "Port scanning"
+    TAGS = ["recon", "scanner", "network"]
+    LAST_VERIFIED = "2026-07-15"
 
     def __init__(self):
         super().__init__(installable=False)
@@ -54,6 +61,8 @@ class PortScan(HackingTool):
 
 class Host2IP(HackingTool):
     TITLE = "Host to IP "
+    TAGS = ["recon", "network"]
+    LAST_VERIFIED = "2026-07-15"
 
     def __init__(self):
         super().__init__(installable=False)
@@ -69,6 +78,8 @@ class Host2IP(HackingTool):
 class ReconSpider(HackingTool):
     TITLE = "ReconSpider(For All Scanning)"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "osint", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "ReconSpider is most Advanced Open Source Intelligence (OSINT)" \
                   " Framework for scanning IP Address, Emails, \n" \
                   "Websites, Organizations and find out information from" \
@@ -83,6 +94,8 @@ class ReconSpider(HackingTool):
 
 class IsItDown(HackingTool):
     TITLE = "IsItDown (Check Website Down/Up)"
+    TAGS = ["recon", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Check Website Is Online or Not"
 
     def __init__(self):
@@ -97,6 +110,8 @@ class IsItDown(HackingTool):
 class Striker(HackingTool):
     TITLE = "Striker"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "scanner", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Recon & Vulnerability Scanning Suite"
     INSTALL_COMMANDS = [
         "git clone https://github.com/s0md3v/Striker.git",
@@ -117,6 +132,8 @@ class Striker(HackingTool):
 class SecretFinder(HackingTool):
     TITLE = "SecretFinder (like API & etc)"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "osint", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "SecretFinder - A python script for find sensitive data \n" \
                   "like apikeys, accesstoken, authorizations, jwt,..etc \n " \
                   "and search anything on javascript files.\n\n " \
@@ -134,6 +151,8 @@ class SecretFinder(HackingTool):
 class Shodan(HackingTool):
     TITLE = "Find Info Using Shodan"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "osint", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Get ports, vulnerabilities, information, banners,..etc \n " \
                   "for any IP with Shodan (no apikey! no rate limit!)\n" \
                   "[X] Don't use this tool because your ip will be blocked by Shodan!"
@@ -147,6 +166,8 @@ class Shodan(HackingTool):
 class PortScannerRanger(HackingTool):
     TITLE = "Port Scanner - rang3r"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "scanner", "network"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "rang3r is a python script which scans in multi thread\n " \
                   "all alive hosts within your range that you specify."
     INSTALL_COMMANDS = [
@@ -167,6 +188,8 @@ class PortScannerRanger(HackingTool):
 class Breacher(HackingTool):
     TITLE = "Breacher"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["recon", "scanner", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "An advanced multithreaded admin panel finder written in python."
     INSTALL_COMMANDS = ["git clone https://github.com/s0md3v/Breacher.git"]
     PROJECT_URL = "https://github.com/s0md3v/Breacher"
@@ -184,6 +207,8 @@ class Breacher(HackingTool):
 class TheHarvester(HackingTool):
     TITLE = "theHarvester (OSINT)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["recon", "osint"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Gather emails, names, subdomains, IPs and URLs from public sources.\n"
         "Usage: theHarvester -d example.com -b all"
@@ -198,6 +223,8 @@ class TheHarvester(HackingTool):
 
 class Amass(HackingTool):
     TITLE = "Amass (Attack Surface Mapping)"
+    TAGS = ["recon", "osint", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "In-depth subdomain enumeration and attack surface mapping.\n"
         "Usage: amass enum -d example.com"
@@ -213,6 +240,9 @@ class Amass(HackingTool):
 
 class Masscan(HackingTool):
     TITLE = "Masscan (Fast Port Scanner)"
+    TAGS = ["recon", "scanner", "network"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "Build from source with VS or use WSL"
     DESCRIPTION = (
         "Fastest internet port scanner — 10 million packets/sec.\n"
         "Usage: masscan -p1-65535 <IP> --rate=1000"
@@ -225,6 +255,8 @@ class Masscan(HackingTool):
 
 class RustScan(HackingTool):
     TITLE = "RustScan (Modern Port Scanner)"
+    TAGS = ["recon", "scanner", "network"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Scans all 65k ports in 3 seconds, passes results to nmap automatically.\n"
         "Usage: rustscan -a <IP> -- -sV"
@@ -241,6 +273,8 @@ class RustScan(HackingTool):
 class Holehe(HackingTool):
     TITLE = "Holehe (Email → Social Accounts)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["osint", "recon", "social"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Check if an email address is registered on 120+ websites.\n"
         "Usage: holehe user@example.com"
@@ -253,6 +287,8 @@ class Holehe(HackingTool):
 class Maigret(HackingTool):
     TITLE = "Maigret (Username OSINT)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["osint", "recon", "social"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Collect a dossier on a person by username across 3000+ sites.\n"
         "Usage: maigret <username>"
@@ -265,6 +301,8 @@ class Maigret(HackingTool):
 class Httpx(HackingTool):
     TITLE = "httpx (HTTP Toolkit)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["recon", "scanner", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Fast multi-purpose HTTP probing tool.\n"
         "Usage: httpx -l urls.txt -status-code -title -tech-detect"
@@ -280,6 +318,8 @@ class Httpx(HackingTool):
 class SpiderFoot(HackingTool):
     TITLE = "SpiderFoot (OSINT Automation)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["osint", "recon", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Automates OSINT collection for threat intelligence and attack surface mapping."
     INSTALL_COMMANDS = ["pip install --user spiderfoot"]
     RUN_COMMANDS = ["spiderfoot -h"]
@@ -289,6 +329,8 @@ class SpiderFoot(HackingTool):
 class Subfinder(HackingTool):
     TITLE = "Subfinder (Subdomain Enumeration)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["recon", "osint", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Fast passive subdomain enumeration using multiple sources."
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -301,6 +343,8 @@ class Subfinder(HackingTool):
 class TruffleHog(HackingTool):
     TITLE = "TruffleHog (Secret Scanner)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["recon", "osint", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Find, verify, and analyze leaked credentials across git repos, S3 buckets, filesystems."
     INSTALL_COMMANDS = ["pip install --user trufflehog"]
     RUN_COMMANDS = ["trufflehog --help"]
@@ -310,6 +354,8 @@ class TruffleHog(HackingTool):
 class Gitleaks(HackingTool):
     TITLE = "Gitleaks (Git Secret Scanner)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["recon", "osint", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Fast secret scanner for git repos — detects hardcoded passwords, API keys, tokens."
     REQUIRES_GO = True
     INSTALL_COMMANDS = [
@@ -322,6 +368,8 @@ class Gitleaks(HackingTool):
 class Uncover(HackingTool):
     TITLE = "Uncover (Multi-Engine Search)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["recon", "osint", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Query multiple search engines (Shodan, Censys, FOFA, Hunter, Quake) from CLI."
     INSTALL_COMMANDS = ["go install -v github.com/projectdiscovery/uncover/cmd/uncover@latest"]
     PROJECT_URL = "https://github.com/projectdiscovery/uncover"
@@ -330,6 +378,8 @@ class Uncover(HackingTool):
 class Alterx(HackingTool):
     TITLE = "Alterx (Subdomain Wordlist Generator)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["recon", "wordlist", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "DSL-based subdomain wordlist permutation generator for targeted enumeration."
     INSTALL_COMMANDS = ["go install -v github.com/projectdiscovery/alterx/cmd/alterx@latest"]
     PROJECT_URL = "https://github.com/projectdiscovery/alterx"
@@ -338,6 +388,8 @@ class Alterx(HackingTool):
 class ReconNg(HackingTool):
     TITLE = "Recon-ng (OSINT Framework)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
+    TAGS = ["osint", "recon", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "Full-featured OSINT web reconnaissance framework with modular design."
     INSTALL_COMMANDS = ["pip install --user recon-ng"]
     RUN_COMMANDS = ["recon-ng"]
@@ -347,6 +399,8 @@ class ReconNg(HackingTool):
 class GitDorker(HackingTool):
     TITLE = "GitDorker (GitHub Secret Finder)"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["osint", "recon", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = "GitHub dorking tool to find sensitive info and secrets using GitHub Search API."
     INSTALL_COMMANDS = [
         "git clone https://github.com/obheda12/GitDorker.git",

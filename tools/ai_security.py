@@ -9,6 +9,8 @@ class PyRIT(HackingTool):
     TITLE = "PyRIT (AI Red Teaming)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "Microsoft Python Risk Identification Toolkit for red-teaming generative AI and LLM systems."
+    TAGS = ["ai", "llm", "scanner", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip install --user pyrit"]
     PROJECT_URL = "https://github.com/Azure/PyRIT"
 
@@ -20,6 +22,8 @@ class Garak(HackingTool):
     TITLE = "Garak (LLM Vulnerability Scanner)"
     SUPPORTED_OS = ["linux", "macos", "windows"]
     DESCRIPTION = "NVIDIA's LLM vulnerability scanner — probes for hallucination, data leakage, prompt injection, toxicity."
+    TAGS = ["ai", "llm", "scanner"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["pip install --user garak"]
     PROJECT_URL = "https://github.com/NVIDIA/garak"
 

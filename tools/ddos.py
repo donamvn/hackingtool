@@ -8,6 +8,8 @@ from core import HackingTool, HackingToolsCollection, console
 class DDoSTool(HackingTool):
     TITLE = "DDoS"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["ddos", "dos", "network"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Best DDoS Attack Script With 36 Plus Methods. "
         "DDoS attacks for SECURITY TESTING PURPOSES ONLY!"
@@ -37,6 +39,8 @@ class DDoSTool(HackingTool):
 class SlowLoris(HackingTool):
     TITLE = "SlowLoris"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["ddos", "dos", "web"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "Slowloris is basically an HTTP Denial of Service attack. "
         "It sends lots of HTTP requests."
@@ -51,6 +55,8 @@ class SlowLoris(HackingTool):
 class UFONet(HackingTool):
     TITLE = "UFOnet"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["ddos", "dos", "network"]
+    LAST_VERIFIED = "2026-07-15"
     DESCRIPTION = (
         "UFONet is a free software, P2P and cryptographic disruptive toolkit "
         "that allows performing DoS and DDoS attacks."

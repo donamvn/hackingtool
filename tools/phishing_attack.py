@@ -7,6 +7,8 @@ class Autophisher(HackingTool):
     TITLE = "Autophisher RK"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Automated Phishing Toolkit"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/CodingRanjith/autophisher.git",
     ]
@@ -18,6 +20,8 @@ class Pyphisher(HackingTool):
     TITLE = "Pyphisher"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Easy to use phishing tool with 77 website templates"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     # Bug 9 fix: pip must reference the full path, not rely on a no-op "cd" call
     INSTALL_COMMANDS = [
         "git clone https://github.com/KasRoudra/PyPhisher",
@@ -32,6 +36,8 @@ class AdvPhishing(HackingTool):
     TITLE = "AdvPhishing"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "This is Advance Phishing Tool ! OTP PHISHING"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Ignitetch/AdvPhishing.git",
         # Vuln 2 fix: chmod 777 → chmod +x
@@ -48,6 +54,8 @@ class Setoolkit(HackingTool):
         "The Social-Engineer Toolkit is an open-source penetration\n"
         "testing framework designed for social engineering."
     )
+    TAGS = ["phishing", "social", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/trustedsec/social-engineer-toolkit/",
         "cd social-engineer-toolkit && pip install --user .",
@@ -60,6 +68,8 @@ class SocialFish(HackingTool):
     TITLE = "SocialFish"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Automated Phishing Tool & Information Collector NOTE: username is 'root' and password is 'pass'"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/UndeadSec/SocialFish.git && sudo apt-get install python3 python3-pip python3-dev -y",
         "cd SocialFish && pip install --user -r requirements.txt",
@@ -75,6 +85,8 @@ class HiddenEye(HackingTool):
         "Modern Phishing Tool With Advanced Functionality And Multiple Tunnelling Services\n"
         "\t[!] https://github.com/DarkSecDevelopers/HiddenEye"
     )
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         # Vuln 2 fix: chmod 777 → chmod 755
         "git clone https://github.com/Morsmalleo/HiddenEye.git && chmod -R 755 HiddenEye",
@@ -92,6 +104,8 @@ class Evilginx3(HackingTool):
         "along with session cookies, bypassing 2-factor authentication.\n"
         "Requires Go >= 1.18 installed."
     )
+    TAGS = ["phishing", "social", "web"]
+    LAST_VERIFIED = "2026-07-15"
     # Bug 6 fix: removed 'sudo evilginx' (interactive) from INSTALL_COMMANDS
     INSTALL_COMMANDS = [
         "sudo apt-get install -y git make golang-go",
@@ -109,6 +123,8 @@ class ISeeYou(HackingTool):
         "[!] ISeeYou finds the exact location of a target via social engineering.\n"
         "[!] Expose local servers to the internet and decode location from log file."
     )
+    TAGS = ["phishing", "social", "osint"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Viralmaniar/I-See-You.git",
         "cd I-See-You && sudo chmod u+x ISeeYou.sh",
@@ -121,6 +137,8 @@ class SayCheese(HackingTool):
     TITLE = "SayCheese"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Take webcam shots from target just by sending a malicious link"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/hangetzzu/saycheese"]
     RUN_COMMANDS = ["cd saycheese && sudo bash saycheese.sh"]
     PROJECT_URL = "https://github.com/hangetzzu/saycheese"
@@ -130,6 +148,8 @@ class QRJacking(HackingTool):
     TITLE = "QR Code Jacking"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "QR Code Jacking (Any Website)"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/cryptedwolf/ohmyqr.git && sudo apt -y install scrot",
     ]
@@ -144,6 +164,8 @@ class BlackEye(HackingTool):
     TITLE = "BlackEye"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "The ultimate phishing tool with 38 websites available!"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/thelinuxchoice/blackeye",
     ]
@@ -155,6 +177,8 @@ class ShellPhish(HackingTool):
     TITLE = "ShellPhish"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Phishing Tool for 18 social media"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/An0nUD4Y/shellphish.git"]
     RUN_COMMANDS = ["cd shellphish && sudo bash shellphish.sh"]
     PROJECT_URL = "https://github.com/An0nUD4Y/shellphish"
@@ -164,6 +188,8 @@ class Thanos(HackingTool):
     TITLE = "Thanos"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Browser to Browser Phishing toolkit"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/TridevReddy/Thanos.git",
         # Vuln 2 fix: chmod -R 777 → chmod +x
@@ -177,6 +203,8 @@ class QRLJacking(HackingTool):
     TITLE = "QRLJacking"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "QRLJacking — session hijacking attack vector targeting QR code based login"
+    TAGS = ["phishing", "social", "web"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/OWASP/QRLJacking.git",
         # Bug fix: geckodriver must be fetched as a binary, not cloned from source
@@ -193,6 +221,8 @@ class Maskphish(HackingTool):
     TITLE = "Maskphish"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Hide phishing URL under a normal looking URL (google.com or facebook.com)"
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/jaykali/maskphish.git",
     ]
@@ -203,6 +233,8 @@ class Maskphish(HackingTool):
 class BlackPhish(HackingTool):
     TITLE = "BlackPhish"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["phishing", "social"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/iinc0gnit0/BlackPhish.git",
         "cd BlackPhish && sudo bash install.sh",

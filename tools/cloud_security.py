@@ -9,6 +9,8 @@ class Prowler(HackingTool):
     RUN_COMMANDS = ["prowler --help"]
     PROJECT_URL = "https://github.com/prowler-cloud/prowler"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["cloud", "scanner", "recon"]
+    LAST_VERIFIED = "2026-07-15"
 
 
 class ScoutSuite(HackingTool):
@@ -18,6 +20,8 @@ class ScoutSuite(HackingTool):
     RUN_COMMANDS = ["scout --help"]
     PROJECT_URL = "https://github.com/nccgroup/ScoutSuite"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["cloud", "scanner", "recon"]
+    LAST_VERIFIED = "2026-07-15"
 
 
 class Pacu(HackingTool):
@@ -27,6 +31,8 @@ class Pacu(HackingTool):
     RUN_COMMANDS = ["pacu --help"]
     PROJECT_URL = "https://github.com/RhinoSecurityLabs/pacu"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["cloud", "exploit", "post-exploit"]
+    LAST_VERIFIED = "2026-07-15"
 
 
 class Trivy(HackingTool):
@@ -38,12 +44,17 @@ class Trivy(HackingTool):
     RUN_COMMANDS = ["trivy --help"]
     PROJECT_URL = "https://github.com/aquasecurity/trivy"
     SUPPORTED_OS = ["linux", "macos"]
+    TAGS = ["container", "k8s", "scanner", "cloud"]
+    LAST_VERIFIED = "2026-07-15"
+    WIN_INSTALL_HINT = "choco install trivy"
 
 
 class CDK(HackingTool):
     TITLE = "CDK (Container/K8s Pentesting)"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Zero-dependency container/K8s penetration toolkit for escaping and lateral movement."
+    TAGS = ["container", "k8s", "exploit", "post-exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "curl -sSL https://github.com/cdk-team/CDK/releases/latest/download/cdk_linux_amd64 -o cdk",
         "chmod +x cdk",
@@ -55,6 +66,8 @@ class Kubescape(HackingTool):
     TITLE = "Kubescape (K8s Security Scanner)"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Kubernetes security platform — risk analysis, compliance, misconfiguration scanning."
+    TAGS = ["k8s", "scanner", "cloud"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash"]
     PROJECT_URL = "https://github.com/kubescape/kubescape"
 

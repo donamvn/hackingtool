@@ -19,6 +19,8 @@ class AnonymouslySurf(HackingTool):
     RUN_COMMANDS = ["sudo anonsurf start"]
     PROJECT_URL = "https://github.com/Und3rf10w/kali-anonsurf"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["privacy", "anonymity", "network"]
+    LAST_VERIFIED = "2026-07-15"
 
     def __init__(self):
         super().__init__([("Stop", self.stop)])
@@ -41,6 +43,8 @@ class Multitor(HackingTool):
     ]
     PROJECT_URL = "https://github.com/trimstray/multitor"
     SUPPORTED_OS = ["linux"]
+    TAGS = ["privacy", "anonymity", "network"]
+    LAST_VERIFIED = "2026-07-15"
 
     def __init__(self):
         super().__init__(runnable=False)

@@ -11,6 +11,8 @@ class TheFatRat(HackingTool):
         "TheFatRat provides an easy way to create backdoors and payloads "
         "which can bypass most anti-virus."
     )
+    TAGS = ["payload", "exploit", "rat"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/Screetsec/TheFatRat.git",
         "cd TheFatRat && chmod +x setup.sh",
@@ -45,6 +47,8 @@ class Stitch(HackingTool):
         "Stitch is a Cross Platform Python Remote Administrator Tool.\n"
         "[!] Refer to the project link for Windows & macOS support."
     )
+    TAGS = ["payload", "remote", "rat"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/nathanlopez/Stitch.git",
         "cd Stitch && pip install --user -r lnx_requirements.txt",
@@ -60,6 +64,8 @@ class MSFVenom(HackingTool):
         "MSFvenom Payload Creator (MSFPC) is a wrapper to generate multiple "
         "types of payloads, based on user choice."
     )
+    TAGS = ["payload", "exploit"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/g0tmi1k/msfpc.git",
         "cd msfpc && chmod +x msfpc.sh",
@@ -72,6 +78,8 @@ class Venom(HackingTool):
     TITLE = "Venom Shellcode Generator"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Venom exploits apache2 webserver to deliver LAN payloads via fake webpages."
+    TAGS = ["payload", "exploit", "web"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = [
         "git clone https://github.com/r00t-3xp10it/venom.git",
         # Removed "sudo ./venom.sh -u" from install — interactive, runs the tool during install
@@ -85,6 +93,8 @@ class MobDroid(HackingTool):
     TITLE = "Mob-Droid"
     SUPPORTED_OS = ["linux"]
     DESCRIPTION = "Generates metasploit payloads easily without typing long commands."
+    TAGS = ["payload", "mobile", "android"]
+    LAST_VERIFIED = "2026-07-15"
     INSTALL_COMMANDS = ["git clone https://github.com/kinghacker0/mob-droid.git"]
     RUN_COMMANDS = ["cd mob-droid && sudo python3 mob-droid.py"]
     PROJECT_URL = "https://github.com/kinghacker0/Mob-Droid"
